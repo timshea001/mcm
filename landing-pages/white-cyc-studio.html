@@ -693,6 +693,10 @@
             margin-left: 3px;
         }
 
+        .portfolio-item.video-trigger {
+            cursor: pointer;
+        }
+
         /* ========================================
            Specifications Section
            ======================================== */
@@ -1373,6 +1377,86 @@
                 padding-bottom: 80px;
             }
         }
+
+        /* ========================================
+           Video Lightbox
+           ======================================== */
+        .video-lightbox {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: rgba(0, 0, 0, 0.95);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .video-lightbox.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .video-lightbox-content {
+            position: relative;
+            width: 90%;
+            max-width: 1000px;
+            aspect-ratio: 16/9;
+            background: #000;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+        }
+
+        .video-lightbox.active .video-lightbox-content {
+            transform: scale(1);
+        }
+
+        .video-lightbox-content iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .video-lightbox-close {
+            position: absolute;
+            top: -50px;
+            right: 0;
+            width: 40px;
+            height: 40px;
+            background: transparent;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all var(--transition-base);
+        }
+
+        .video-lightbox-close:hover {
+            background: var(--color-accent);
+            border-color: var(--color-accent);
+        }
+
+        .video-lightbox-close svg {
+            width: 20px;
+            height: 20px;
+            color: #fff;
+        }
+
+        .video-lightbox-close:hover svg {
+            color: #000;
+        }
+
+        .video-lightbox-backdrop {
+            position: absolute;
+            inset: 0;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -1564,7 +1648,7 @@
             <p class="section-subtitle">Join the productions that trust MCM for their most important shoots</p>
 
             <div class="portfolio-grid">
-                <a href="https://www.youtube.com/watch?v=nzz7ggWG7rA" target="_blank" class="portfolio-item" rel="noopener">
+                <div class="portfolio-item video-trigger" data-video-id="nzz7ggWG7rA">
                     <img src="../assets/STUDIO_B/OC_MSG-43.jpg" alt="A24 We Live In Time Production at MCM Studios" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3 class="portfolio-title">A24's "We Live In Time"</h3>
@@ -1575,8 +1659,8 @@
                             <path d="M8 5v14l11-7z"/>
                         </svg>
                     </div>
-                </a>
-                <a href="https://www.youtube.com/watch?v=yHCtfU3syM4" target="_blank" class="portfolio-item" rel="noopener">
+                </div>
+                <div class="portfolio-item video-trigger" data-video-id="yHCtfU3syM4">
                     <img src="../assets/STUDIO_B/STUDIO B BTS.jpg" alt="Diary of a CEO with Jimmy Fallon at MCM Studios" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3 class="portfolio-title">Diary of a CEO</h3>
@@ -1587,8 +1671,8 @@
                             <path d="M8 5v14l11-7z"/>
                         </svg>
                     </div>
-                </a>
-                <a href="https://www.youtube.com/watch?v=8mjxuy_-ahY" target="_blank" class="portfolio-item" rel="noopener">
+                </div>
+                <div class="portfolio-item video-trigger" data-video-id="8mjxuy_-ahY">
                     <img src="../assets/STUDIO_B/MilkCup_BTS_1.png" alt="Jake Paul & Logan Paul Lie Detector at MCM Studios" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3 class="portfolio-title">Jake Paul & Logan Paul</h3>
@@ -1599,7 +1683,7 @@
                             <path d="M8 5v14l11-7z"/>
                         </svg>
                     </div>
-                </a>
+                </div>
                 <div class="portfolio-item">
                     <img src="../assets/STUDIO_B/CELIAC_1.png" alt="CrowdStrike Live Keying Production" loading="lazy">
                     <div class="portfolio-overlay">
@@ -2194,6 +2278,61 @@
                 });
             });
         });
+    </script>
+
+    <!-- Video Lightbox -->
+    <div class="video-lightbox" id="videoLightbox">
+        <div class="video-lightbox-backdrop" id="lightboxBackdrop"></div>
+        <div class="video-lightbox-content">
+            <button class="video-lightbox-close" id="lightboxClose">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"/>
+                    <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+            </button>
+            <iframe id="lightboxVideo" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Video Lightbox Script -->
+    <script>
+        (function() {
+            const lightbox = document.getElementById('videoLightbox');
+            const lightboxVideo = document.getElementById('lightboxVideo');
+            const lightboxClose = document.getElementById('lightboxClose');
+            const lightboxBackdrop = document.getElementById('lightboxBackdrop');
+            const videoTriggers = document.querySelectorAll('.video-trigger');
+
+            function openLightbox(videoId) {
+                lightboxVideo.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeLightbox() {
+                lightbox.classList.remove('active');
+                lightboxVideo.src = '';
+                document.body.style.overflow = '';
+            }
+
+            videoTriggers.forEach(trigger => {
+                trigger.addEventListener('click', function() {
+                    const videoId = this.dataset.videoId;
+                    if (videoId) {
+                        openLightbox(videoId);
+                    }
+                });
+            });
+
+            lightboxClose.addEventListener('click', closeLightbox);
+            lightboxBackdrop.addEventListener('click', closeLightbox);
+
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                    closeLightbox();
+                }
+            });
+        })();
     </script>
 
     <!-- Google Analytics placeholder -->
