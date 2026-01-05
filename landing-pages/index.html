@@ -92,7 +92,13 @@
 
         @media (min-width: 768px) {
             .cards {
-                grid-template-columns: repeat(3, 1fr);
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .cards {
+                grid-template-columns: repeat(4, 1fr);
             }
         }
 
@@ -165,6 +171,15 @@
         .card-kitchen .card-label {
             background: rgba(249, 115, 22, 0.2);
             color: #F97316;
+        }
+
+        .card-home .card-image {
+            background-image: url('../assets/STUDIO_D/POWER_OF_Z_HOMESTUDIO.jpg');
+        }
+
+        .card-home .card-label {
+            background: rgba(139, 115, 85, 0.2);
+            color: #C4A77D;
         }
 
         .card-title {
@@ -295,6 +310,21 @@
                         <span class="card-label">Studio C</span>
                         <h2 class="card-title">Kitchen Studio</h2>
                         <p class="card-description">Full working kitchen, modular design. As seen on Food Network, PBS, Rachael Ray.</p>
+                        <span class="card-link">
+                            View Landing Page
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </span>
+                    </div>
+                </a>
+
+                <a href="home-studio.html" class="card card-home">
+                    <div class="card-image"></div>
+                    <div class="card-content">
+                        <span class="card-label">Studio D</span>
+                        <h2 class="card-title">Home Studio</h2>
+                        <p class="card-description">Authentic residential set, pre-lit for interviews. Perfect for testimonials & corporate video.</p>
                         <span class="card-link">
                             View Landing Page
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
