@@ -1,0 +1,2121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Screen Studio NYC | Professional Chroma Key Stage | MCM Stages</title>
+    <meta name="description" content="Professional green screen studio in Manhattan with live keying capabilities. Multiple stages, post-production on-site. Trusted for commercial and broadcast work. Book today!">
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Green Screen Studio NYC | MCM Stages">
+    <meta property="og:description" content="Professional green screen studio in Manhattan. Live keying, multiple stages, post-production on-site. Trusted by A24, HBO, major brands.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mcmstages.com/green-screen-studio">
+
+    <!-- Schema.org markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "MCM Stages - Green Screen Studio",
+      "image": "https://mcmstages.com/assets/STUDIO_A/GREEN-SCREEN-STUDIO-A10.JPG",
+      "description": "Professional green screen studio rental in Manhattan, NYC. Multiple stages with live keying capabilities and post-production services.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "253 West 28th Street, 3rd and 4th Floor",
+        "addressLocality": "New York",
+        "addressRegion": "NY",
+        "postalCode": "10001",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 40.7489,
+        "longitude": -73.9965
+      },
+      "url": "https://mcmstages.com/green-screen-studio",
+      "telephone": "+19177407612",
+      "email": "hello@mcmcreativeproductions.com",
+      "priceRange": "$$$$",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "20"
+      }
+    }
+    </script>
+
+    <style>
+        /* ========================================
+           CSS Reset & Variables
+           ======================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --color-black: #000000;
+            --color-white: #FFFFFF;
+            --color-accent: #00D9FF;
+            --color-accent-dark: #00B8D4;
+            --color-green: #22C55E;
+            --color-green-dark: #16A34A;
+            --color-grey-50: #F9FAFB;
+            --color-grey-100: #F3F4F6;
+            --color-grey-200: #E5E7EB;
+            --color-grey-300: #D1D5DB;
+            --color-grey-400: #9CA3AF;
+            --color-grey-500: #6B7280;
+            --color-grey-600: #4B5563;
+            --color-grey-700: #374151;
+            --color-grey-800: #1F2937;
+            --color-grey-900: #111827;
+            --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            --transition-base: 250ms ease;
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            --radius-md: 8px;
+            --radius-lg: 12px;
+        }
+
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-family);
+            line-height: 1.6;
+            color: var(--color-grey-900);
+            background-color: var(--color-white);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* ========================================
+           Buttons
+           ======================================== */
+        .btn {
+            display: inline-block;
+            padding: 0.875rem 1.75rem;
+            font-weight: 600;
+            font-size: 0.9375rem;
+            text-align: center;
+            border: 2px solid transparent;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            transition: all var(--transition-base);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+        }
+
+        .btn-primary {
+            background-color: var(--color-accent);
+            color: var(--color-black);
+            border-color: var(--color-accent);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--color-accent-dark);
+            border-color: var(--color-accent-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-green {
+            background-color: var(--color-green);
+            color: var(--color-white);
+            border-color: var(--color-green);
+        }
+
+        .btn-green:hover {
+            background-color: var(--color-green-dark);
+            border-color: var(--color-green-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--color-black);
+            border-color: var(--color-black);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--color-black);
+            color: var(--color-white);
+            transform: translateY(-2px);
+        }
+
+        .btn-small {
+            padding: 0.625rem 1.25rem;
+            font-size: 0.875rem;
+        }
+
+        .btn-large {
+            padding: 1rem 2.5rem;
+            font-size: 1rem;
+        }
+
+        .btn-block {
+            display: block;
+            width: 100%;
+        }
+
+        /* ========================================
+           Sticky Header
+           ======================================== */
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: var(--color-white);
+            border-bottom: 1px solid var(--color-grey-200);
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .phone-link {
+            font-weight: 600;
+            color: var(--color-black);
+            display: none;
+        }
+
+        @media (min-width: 768px) {
+            .phone-link {
+                display: inline-block;
+            }
+        }
+
+        /* ========================================
+           Hero Section
+           ======================================== */
+        .hero {
+            position: relative;
+            min-height: 700px;
+            display: flex;
+            align-items: center;
+            padding: 4rem 0;
+            overflow: hidden;
+        }
+
+        .hero-background {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, #0a2e0a 0%, #1a4a1a 50%, #0a2e0a 100%);
+        }
+
+        .hero-background img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.5;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.5) 100%);
+        }
+
+        .hero-container {
+            position: relative;
+            z-index: 10;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        @media (min-width: 1024px) {
+            .hero-container {
+                grid-template-columns: 1fr 420px;
+            }
+        }
+
+        .hero-content {
+            color: var(--color-white);
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(34, 197, 94, 0.2);
+            border: 1px solid var(--color-green);
+            color: var(--color-green);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1.25rem;
+            line-height: 1.1;
+        }
+
+        @media (min-width: 768px) {
+            .hero-title {
+                font-size: 3.25rem;
+            }
+        }
+
+        .hero-subtitle {
+            font-size: 1.125rem;
+            margin-bottom: 2rem;
+            color: var(--color-grey-300);
+            max-width: 540px;
+        }
+
+        @media (min-width: 768px) {
+            .hero-subtitle {
+                font-size: 1.25rem;
+            }
+        }
+
+        .hero-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero-feature {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9375rem;
+            color: var(--color-grey-200);
+        }
+
+        .hero-feature svg {
+            width: 20px;
+            height: 20px;
+            color: var(--color-green);
+            flex-shrink: 0;
+        }
+
+        .trust-logos {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.15);
+        }
+
+        .trust-logos-label {
+            font-size: 0.75rem;
+            color: var(--color-grey-400);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .trust-logo {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--color-grey-300);
+            opacity: 0.7;
+        }
+
+        /* ========================================
+           Lead Form
+           ======================================== */
+        .lead-form-card {
+            background-color: var(--color-white);
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .form-title {
+            font-size: 1.375rem;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .form-subtitle {
+            font-size: 0.9375rem;
+            color: var(--color-grey-500);
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .lead-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        @media (min-width: 480px) {
+            .form-row {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.875rem;
+            border: 2px solid var(--color-grey-200);
+            border-radius: var(--radius-md);
+            font-family: var(--font-family);
+            font-size: 1rem;
+            transition: border-color var(--transition-base);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--color-green);
+        }
+
+        .form-group input.error,
+        .form-group select.error {
+            border-color: #EF4444;
+        }
+
+        .error-message {
+            color: #EF4444;
+            font-size: 0.8125rem;
+            margin-top: 0.25rem;
+            display: none;
+        }
+
+        .error-message.visible {
+            display: block;
+        }
+
+        .form-cta-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            margin-top: 0.5rem;
+        }
+
+        .form-trust {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            font-size: 0.8125rem;
+            color: var(--color-grey-500);
+        }
+
+        .form-trust svg {
+            width: 16px;
+            height: 16px;
+            color: var(--color-green);
+        }
+
+        /* ========================================
+           Social Proof Bar
+           ======================================== */
+        .social-proof {
+            background-color: var(--color-grey-900);
+            padding: 2rem 0;
+            border-bottom: 1px solid var(--color-grey-800);
+        }
+
+        .social-proof-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .social-proof-content {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+
+        .social-proof-label {
+            font-size: 0.8125rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--color-grey-400);
+        }
+
+        .logo-carousel {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .logo-item {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--color-grey-300);
+            opacity: 0.8;
+        }
+
+        /* ========================================
+           Section Titles
+           ======================================== */
+        .section-title {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--color-black);
+        }
+
+        .section-subtitle {
+            font-size: 1.125rem;
+            text-align: center;
+            color: var(--color-grey-600);
+            max-width: 600px;
+            margin: 0 auto 3rem;
+        }
+
+        @media (min-width: 768px) {
+            .section-title {
+                font-size: 2.5rem;
+            }
+        }
+
+        /* ========================================
+           Key Features Section
+           ======================================== */
+        .features {
+            padding: 5rem 0;
+            background: var(--color-white);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .features-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 2rem 1.5rem;
+            border-radius: var(--radius-lg);
+            background: var(--color-grey-50);
+            transition: transform var(--transition-base), box-shadow var(--transition-base);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .feature-icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--color-green);
+            border-radius: 50%;
+        }
+
+        .feature-icon svg {
+            width: 32px;
+            height: 32px;
+            color: var(--color-white);
+        }
+
+        .feature-title {
+            font-size: 1.125rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+
+        .feature-description {
+            font-size: 0.9375rem;
+            color: var(--color-grey-600);
+            line-height: 1.5;
+        }
+
+        /* ========================================
+           Studio Options Section
+           ======================================== */
+        .studio-options {
+            padding: 5rem 0;
+            background: var(--color-grey-50);
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .options-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .option-card {
+            background: var(--color-white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            transition: transform var(--transition-base);
+        }
+
+        .option-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .option-image {
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .option-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .option-content {
+            padding: 2rem;
+        }
+
+        .option-label {
+            display: inline-block;
+            background: var(--color-green);
+            color: var(--color-white);
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .option-title {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .option-size {
+            font-size: 1rem;
+            color: var(--color-grey-500);
+            margin-bottom: 1rem;
+        }
+
+        .option-features {
+            margin-bottom: 1.5rem;
+        }
+
+        .option-features li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--color-grey-700);
+            font-size: 0.9375rem;
+        }
+
+        .option-features li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--color-green);
+            font-weight: 700;
+        }
+
+        /* ========================================
+           Portfolio Section
+           ======================================== */
+        .portfolio {
+            padding: 5rem 0;
+            background: var(--color-grey-900);
+            color: var(--color-white);
+        }
+
+        .portfolio .section-title {
+            color: var(--color-white);
+        }
+
+        .portfolio .section-subtitle {
+            color: var(--color-grey-400);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 640px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .portfolio-item {
+            position: relative;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            aspect-ratio: 16/10;
+            background: var(--color-grey-800);
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 60%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 1.5rem;
+        }
+
+        .portfolio-title {
+            font-size: 1.125rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+
+        .portfolio-subtitle {
+            font-size: 0.875rem;
+            color: var(--color-grey-400);
+        }
+
+        /* ========================================
+           Specifications Section
+           ======================================== */
+        .specifications {
+            padding: 5rem 0;
+            background: var(--color-white);
+        }
+
+        .specs-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+
+        @media (min-width: 1024px) {
+            .specs-container {
+                grid-template-columns: 1fr 1fr;
+                align-items: start;
+            }
+        }
+
+        .specs-content h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .specs-content > p {
+            color: var(--color-grey-600);
+            margin-bottom: 2rem;
+        }
+
+        .specs-list {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .specs-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1rem;
+            background: var(--color-grey-50);
+            border-radius: var(--radius-md);
+        }
+
+        .specs-icon {
+            width: 40px;
+            height: 40px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--color-green);
+            border-radius: var(--radius-md);
+        }
+
+        .specs-icon svg {
+            width: 20px;
+            height: 20px;
+            color: var(--color-white);
+        }
+
+        .specs-text h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .specs-text p {
+            font-size: 0.9375rem;
+            color: var(--color-grey-600);
+        }
+
+        .specs-image {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-xl);
+        }
+
+        .specs-image img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* ========================================
+           Ideal For Section
+           ======================================== */
+        .ideal-for {
+            padding: 5rem 0;
+            background: var(--color-grey-50);
+        }
+
+        .ideal-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .ideal-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .ideal-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .ideal-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem;
+            background: var(--color-white);
+            border-radius: var(--radius-md);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .ideal-item svg {
+            width: 20px;
+            height: 20px;
+            color: var(--color-green);
+            flex-shrink: 0;
+        }
+
+        .ideal-item span {
+            font-size: 0.9375rem;
+            font-weight: 500;
+        }
+
+        /* ========================================
+           Testimonial Section
+           ======================================== */
+        .testimonial {
+            padding: 5rem 0;
+            background: var(--color-white);
+        }
+
+        .testimonial-card {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 3rem 2rem;
+            background: var(--color-grey-50);
+            border-radius: var(--radius-lg);
+            border-left: 4px solid var(--color-green);
+        }
+
+        .testimonial-quote {
+            font-size: 1.375rem;
+            font-style: italic;
+            line-height: 1.7;
+            color: var(--color-grey-700);
+            margin-bottom: 1.5rem;
+        }
+
+        .testimonial-author {
+            font-weight: 700;
+            font-size: 1.125rem;
+            color: var(--color-black);
+        }
+
+        .testimonial-role {
+            font-size: 0.9375rem;
+            color: var(--color-grey-500);
+        }
+
+        .testimonial-rating {
+            display: flex;
+            justify-content: center;
+            gap: 0.25rem;
+            margin-top: 1rem;
+        }
+
+        .testimonial-rating svg {
+            width: 20px;
+            height: 20px;
+            color: #FCD34D;
+            fill: #FCD34D;
+        }
+
+        /* ========================================
+           Amenities Section
+           ======================================== */
+        .amenities {
+            padding: 5rem 0;
+            background: var(--color-grey-50);
+        }
+
+        .amenities-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .amenities-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .amenities-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .amenity-card {
+            background: var(--color-white);
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .amenity-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .amenity-card h3 svg {
+            width: 24px;
+            height: 24px;
+            color: var(--color-green);
+        }
+
+        .amenity-list li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--color-grey-600);
+            font-size: 0.9375rem;
+        }
+
+        .amenity-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--color-green);
+            font-weight: 700;
+        }
+
+        /* ========================================
+           Services Section
+           ======================================== */
+        .services {
+            padding: 5rem 0;
+            background: var(--color-grey-900);
+            color: var(--color-white);
+        }
+
+        .services .section-title {
+            color: var(--color-white);
+        }
+
+        .services .section-subtitle {
+            color: var(--color-grey-400);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .services-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .service-card {
+            background: var(--color-grey-800);
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            text-align: center;
+            transition: transform var(--transition-base);
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .service-icon {
+            width: 56px;
+            height: 56px;
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--color-green);
+            border-radius: 50%;
+        }
+
+        .service-icon svg {
+            width: 28px;
+            height: 28px;
+            color: var(--color-white);
+        }
+
+        .service-card h3 {
+            font-size: 1.125rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-card p {
+            font-size: 0.9375rem;
+            color: var(--color-grey-400);
+        }
+
+        /* ========================================
+           Location Section
+           ======================================== */
+        .location {
+            padding: 5rem 0;
+            background: var(--color-grey-50);
+        }
+
+        .location-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+
+        @media (min-width: 1024px) {
+            .location-container {
+                grid-template-columns: 1fr 1fr;
+                align-items: center;
+            }
+        }
+
+        .location-content h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .location-content > p {
+            color: var(--color-grey-600);
+            margin-bottom: 2rem;
+        }
+
+        .location-details {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .location-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .location-item svg {
+            width: 24px;
+            height: 24px;
+            color: var(--color-green);
+            flex-shrink: 0;
+            margin-top: 0.125rem;
+        }
+
+        .location-item strong {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .location-item span, .location-item a {
+            color: var(--color-grey-600);
+            font-size: 0.9375rem;
+        }
+
+        .location-item a {
+            color: var(--color-green);
+        }
+
+        .location-item a:hover {
+            text-decoration: underline;
+        }
+
+        .location-map {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            background: var(--color-grey-200);
+            min-height: 300px;
+        }
+
+        .location-map iframe {
+            width: 100%;
+            height: 100%;
+            min-height: 300px;
+            border: 0;
+        }
+
+        /* ========================================
+           Final CTA Section
+           ======================================== */
+        .final-cta {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #0a2e0a 0%, #1a4a1a 100%);
+            color: var(--color-white);
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--color-white);
+        }
+
+        @media (min-width: 768px) {
+            .final-cta h2 {
+                font-size: 2.5rem;
+            }
+        }
+
+        .final-cta p {
+            font-size: 1.125rem;
+            color: var(--color-grey-300);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            .cta-buttons {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+
+        .final-cta .btn-secondary {
+            color: var(--color-white);
+            border-color: var(--color-white);
+        }
+
+        .final-cta .btn-secondary:hover {
+            background-color: var(--color-white);
+            color: var(--color-black);
+        }
+
+        .cta-contact {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            .cta-contact {
+                flex-direction: row;
+                justify-content: center;
+                gap: 3rem;
+            }
+        }
+
+        .cta-contact a {
+            color: var(--color-grey-300);
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color var(--transition-base);
+        }
+
+        .cta-contact a:hover {
+            color: var(--color-green);
+        }
+
+        .cta-contact svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        /* ========================================
+           Footer
+           ======================================== */
+        .footer {
+            background-color: var(--color-grey-900);
+            color: var(--color-grey-300);
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .footer-title {
+            font-size: 1.125rem;
+            color: var(--color-white);
+            margin-bottom: 1rem;
+        }
+
+        .footer-contact p {
+            margin-bottom: 0.75rem;
+            font-size: 0.9375rem;
+        }
+
+        .footer-contact a {
+            color: var(--color-green);
+        }
+
+        .footer-contact a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: var(--color-grey-300);
+            font-size: 0.9375rem;
+            transition: color var(--transition-base);
+        }
+
+        .footer-links a:hover {
+            color: var(--color-white);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--color-grey-800);
+            color: var(--color-grey-500);
+            font-size: 0.875rem;
+        }
+
+        /* ========================================
+           Mobile Sticky CTA
+           ======================================== */
+        .mobile-sticky-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1rem;
+            background-color: var(--color-white);
+            box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1);
+            z-index: 999;
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .mobile-sticky-cta .btn {
+            flex: 1;
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            .mobile-sticky-cta {
+                display: none;
+            }
+        }
+
+        @media (max-width: 767px) {
+            body {
+                padding-bottom: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sticky Header -->
+    <header class="sticky-header">
+        <div class="container header-content">
+            <a href="/" class="logo">MCM STAGES</a>
+            <div class="header-actions">
+                <a href="tel:+19177407612" class="phone-link">(917) 740-7612</a>
+                <a href="#quote-form" class="btn btn-primary btn-small">Get Quote</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <img src="../assets/STUDIO_A/GREEN-SCREEN-STUDIO-A10.JPG" alt="MCM Green Screen Studio NYC" loading="eager">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="hero-badge">Live Keying & Virtual Production Ready</span>
+                <h1 class="hero-title">Professional Green Screen Studio in Manhattan</h1>
+                <p class="hero-subtitle">Multiple green screen stages with live keying capabilities, professional chroma key setup, and post-production services on-site.</p>
+
+                <div class="hero-features">
+                    <div class="hero-feature">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <span>Multiple Stages</span>
+                    </div>
+                    <div class="hero-feature">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <span>Live Keying</span>
+                    </div>
+                    <div class="hero-feature">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <span>4K Multi-Camera</span>
+                    </div>
+                    <div class="hero-feature">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <span>Post-Production On-Site</span>
+                    </div>
+                </div>
+
+                <div class="trust-logos">
+                    <span class="trust-logos-label">Trusted by:</span>
+                    <span class="trust-logo">A24</span>
+                    <span class="trust-logo">CrowdStrike</span>
+                    <span class="trust-logo">HBO</span>
+                    <span class="trust-logo">Netflix</span>
+                </div>
+            </div>
+
+            <!-- Lead Form -->
+            <div class="lead-form-card" id="quote-form">
+                <h3 class="form-title">Get Instant Pricing & Availability</h3>
+                <p class="form-subtitle">Same-day response guaranteed</p>
+                <form id="leadForm" class="lead-form" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="firstName" name="firstName" placeholder="First Name*" required>
+                            <span class="error-message"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="lastName" name="lastName" placeholder="Last Name*" required>
+                            <span class="error-message"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Email*" required>
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" placeholder="Phone*" required>
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <select id="projectType" name="projectType" required>
+                            <option value="">Select Project Type*</option>
+                            <option value="commercial">Commercial/Advertising</option>
+                            <option value="virtual-production">Virtual Production</option>
+                            <option value="music-video">Music Video</option>
+                            <option value="corporate">Corporate Video</option>
+                            <option value="live-stream">Live Stream/Event</option>
+                            <option value="film-tv">Film/TV Production</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="date" id="shootDate" name="shootDate" placeholder="Preferred Shoot Date">
+                    </div>
+                    <div class="form-cta-wrapper">
+                        <button type="submit" class="btn btn-green btn-block">Request a Quote</button>
+                        <div class="form-trust">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                            </svg>
+                            <span>Your info is secure & never shared</span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Bar -->
+    <section class="social-proof">
+        <div class="container">
+            <div class="social-proof-content">
+                <span class="social-proof-label">Productions Shot Here:</span>
+                <div class="logo-carousel">
+                    <span class="logo-item">A24 Films</span>
+                    <span class="logo-item">CrowdStrike</span>
+                    <span class="logo-item">Problemista</span>
+                    <span class="logo-item">HBO</span>
+                    <span class="logo-item">Commercial Work</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Professional Virtual Production Facility</h2>
+            <p class="section-subtitle">Everything you need for seamless chroma key production</p>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                            <line x1="8" y1="21" x2="16" y2="21"/>
+                            <line x1="12" y1="17" x2="12" y2="21"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Live Keying Capabilities</h3>
+                    <p class="feature-description">Real-time compositing for virtual backgrounds and instant preview</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/>
+                            <circle cx="12" cy="13" r="4"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">4K Multi-Camera Setup</h3>
+                    <p class="feature-description">Professional camera packages ready for broadcast-quality production</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="3"/>
+                            <path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Professional Chroma Key Lighting</h3>
+                    <p class="feature-description">Even, spill-free lighting for perfect key extraction</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                            <line x1="8" y1="21" x2="16" y2="21"/>
+                            <line x1="12" y1="17" x2="12" y2="21"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Post-Production On-Site</h3>
+                    <p class="feature-description">Edit suites, color grading, and mix rooms in the same facility</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Studio Options Section -->
+    <section class="studio-options">
+        <div class="container">
+            <h2 class="section-title">Two Green Screen Options</h2>
+            <p class="section-subtitle">Choose the perfect space for your production needs</p>
+
+            <div class="options-grid">
+                <div class="option-card">
+                    <div class="option-image">
+                        <img src="../assets/STUDIO_A/GREEN-SCREEN-STUDIO-A9.JPG" alt="Studio A Green Screen" loading="lazy">
+                    </div>
+                    <div class="option-content">
+                        <span class="option-label">Studio A</span>
+                        <h3 class="option-title">Dedicated Green Screen Stage</h3>
+                        <p class="option-size">700 sq ft | Pre-lit & turnkey</p>
+                        <ul class="option-features">
+                            <li>Permanent green cyc installation</li>
+                            <li>Pre-lit for quick setup</li>
+                            <li>Isolated engineering booth</li>
+                            <li>Ideal for interviews & talking heads</li>
+                            <li>Live streaming ready</li>
+                        </ul>
+                        <a href="#quote-form" class="btn btn-green">Check Availability</a>
+                    </div>
+                </div>
+                <div class="option-card">
+                    <div class="option-image">
+                        <img src="../assets/STUDIO_C_CYC/STUDIO C GREEN CYC 3.jpg" alt="Studio C Green Screen" loading="lazy">
+                    </div>
+                    <div class="option-content">
+                        <span class="option-label">Studio B/C</span>
+                        <h3 class="option-title">Convertible Cyc Stage</h3>
+                        <p class="option-size">2000+ sq ft | Flexible configuration</p>
+                        <ul class="option-features">
+                            <li>White cyc paintable to green</li>
+                            <li>50' perimeter cyclorama</li>
+                            <li>Larger productions & full-body shots</li>
+                            <li>140 AMP power distribution</li>
+                            <li>Full lighting grid included</li>
+                        </ul>
+                        <a href="#quote-form" class="btn btn-green">Check Availability</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio">
+        <div class="container">
+            <h2 class="section-title">Shot in Our Green Screen Studios</h2>
+            <p class="section-subtitle">From A24 films to major brand campaigns</p>
+
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="../assets/STUDIO_B/CELIAC_1.png" alt="CrowdStrike Live Keying Production" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">CrowdStrike "The Future"</h3>
+                        <p class="portfolio-subtitle">Live Keying Production</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="../assets/STUDIO_A/TORI_TRADES_2.jpg" alt="Commercial Production" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Commercial Production</h3>
+                        <p class="portfolio-subtitle">Multi-camera setup</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="../assets/STUDIO_C_CYC/STUDIO C GREEN CYC 4.jpg" alt="A24 Problemista" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">A24's "Problemista"</h3>
+                        <p class="portfolio-subtitle">Tilda Swinton & Julio Torres</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="../assets/STUDIO_A/GREEN-SCREEN-STUDIO-A9.JPG" alt="Interview Setup" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Corporate Interviews</h3>
+                        <p class="portfolio-subtitle">Virtual Background Ready</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="../assets/STUDIO_B/GreenCYC_Corner-2.jpg" alt="Studio B Green Configuration" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Branded Content</h3>
+                        <p class="portfolio-subtitle">Large-scale productions</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="../assets/STUDIO_A/GREEN-SCREEN-STUDIO-A10.JPG" alt="Full Green Screen Stage" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Music Videos</h3>
+                        <p class="portfolio-subtitle">Full creative control</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specifications Section -->
+    <section class="specifications">
+        <div class="container">
+            <div class="specs-container">
+                <div class="specs-content">
+                    <h2>Technical Specifications</h2>
+                    <p>Our green screen studios are designed for professional-grade chroma key work with minimal setup time.</p>
+
+                    <div class="specs-list">
+                        <div class="specs-item">
+                            <div class="specs-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                    <line x1="8" y1="21" x2="16" y2="21"/>
+                                    <line x1="12" y1="17" x2="12" y2="21"/>
+                                </svg>
+                            </div>
+                            <div class="specs-text">
+                                <h4>Live Keying with Unreal Engine</h4>
+                                <p>Real-time virtual production capabilities</p>
+                            </div>
+                        </div>
+                        <div class="specs-item">
+                            <div class="specs-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/>
+                                    <circle cx="12" cy="13" r="4"/>
+                                </svg>
+                            </div>
+                            <div class="specs-text">
+                                <h4>4K Camera Packages</h4>
+                                <p>FS7 II, Red Epic Dragon, Panasonic S1H available</p>
+                            </div>
+                        </div>
+                        <div class="specs-item">
+                            <div class="specs-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="3"/>
+                                    <path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                                </svg>
+                            </div>
+                            <div class="specs-text">
+                                <h4>Professional Lighting Grid</h4>
+                                <p>HMI, Asteras, Litemats, RGB LED panels</p>
+                            </div>
+                        </div>
+                        <div class="specs-item">
+                            <div class="specs-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                                </svg>
+                            </div>
+                            <div class="specs-text">
+                                <h4>140 AMP Power Distribution</h4>
+                                <p>Professional electrical capacity for any setup</p>
+                            </div>
+                        </div>
+                        <div class="specs-item">
+                            <div class="specs-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M3 18v-6a9 9 0 0118 0v6"/>
+                                    <path d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3v5z"/>
+                                    <path d="M3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3v5z"/>
+                                </svg>
+                            </div>
+                            <div class="specs-text">
+                                <h4>Soundproof & Climate Controlled</h4>
+                                <p>Broadcast-quality audio environment</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="specs-image">
+                    <img src="../assets/STUDIO_A/GREEN-SCREEN-STUDIO-A10.JPG" alt="MCM Green Screen Studio Full View" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ideal For Section -->
+    <section class="ideal-for">
+        <div class="container">
+            <h2 class="section-title">Ideal For</h2>
+            <p class="section-subtitle">Our green screen studios are perfect for a wide range of productions</p>
+
+            <div class="ideal-grid">
+                <div class="ideal-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>Virtual Production</span>
+                </div>
+                <div class="ideal-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>Talking Head Interviews</span>
+                </div>
+                <div class="ideal-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>Commercial Work</span>
+                </div>
+                <div class="ideal-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>Product Demos</span>
+                </div>
+                <div class="ideal-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>Music Videos</span>
+                </div>
+                <div class="ideal-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>Live Streaming</span>
+                </div>
+                <div class="ideal-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>Corporate Presentations</span>
+                </div>
+                <div class="ideal-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>Film/TV Production</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="testimonial">
+        <div class="container">
+            <div class="testimonial-card">
+                <p class="testimonial-quote">"Great hospitality, punctual and helpful communications, a clean and welcoming work environment, and a strong focus on professionalism and on-time delivery - all at a fair price."</p>
+                <p class="testimonial-author">Tobias Deml</p>
+                <p class="testimonial-role">Director, "Gaming Wall Street" (HBO Max)</p>
+                <div class="testimonial-rating">
+                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenities Section -->
+    <section class="amenities">
+        <div class="container">
+            <h2 class="section-title">Studio Amenities</h2>
+            <p class="section-subtitle">Everything you need for a seamless production</p>
+
+            <div class="amenities-grid">
+                <div class="amenity-card">
+                    <h3>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                            <line x1="8" y1="21" x2="16" y2="21"/>
+                            <line x1="12" y1="17" x2="12" y2="21"/>
+                        </svg>
+                        Control Room
+                    </h3>
+                    <ul class="amenity-list">
+                        <li>Isolated engineering booth</li>
+                        <li>Live monitoring station</li>
+                        <li>Switcher & playback systems</li>
+                        <li>Multi-view displays</li>
+                    </ul>
+                </div>
+                <div class="amenity-card">
+                    <h3>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 010 7.75"/>
+                        </svg>
+                        Client Services
+                    </h3>
+                    <ul class="amenity-list">
+                        <li>Comfortable client lounge</li>
+                        <li>Remote monitoring via Zoom</li>
+                        <li>High-speed WiFi</li>
+                        <li>Espresso & refreshments</li>
+                    </ul>
+                </div>
+                <div class="amenity-card">
+                    <h3>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                        </svg>
+                        Production Support
+                    </h3>
+                    <ul class="amenity-list">
+                        <li>On-site stage manager</li>
+                        <li>Talent green rooms</li>
+                        <li>Hair & makeup stations</li>
+                        <li>Catering area</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title">Complete Production Services</h2>
+            <p class="section-subtitle">From shoot to final delivery, all under one roof</p>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/>
+                            <circle cx="12" cy="13" r="4"/>
+                        </svg>
+                    </div>
+                    <h3>Equipment Rental</h3>
+                    <p>Cameras, lenses, grip & lighting</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 010 7.75"/>
+                        </svg>
+                    </div>
+                    <h3>Production Crew</h3>
+                    <p>DPs, gaffers, camera ops</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                            <line x1="8" y1="21" x2="16" y2="21"/>
+                            <line x1="12" y1="17" x2="12" y2="21"/>
+                        </svg>
+                    </div>
+                    <h3>Post-Production</h3>
+                    <p>Editing, VFX, color & sound</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="23 7 16 12 23 17 23 7"/>
+                            <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+                        </svg>
+                    </div>
+                    <h3>Live Streaming</h3>
+                    <p>Multi-platform broadcast</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="location">
+        <div class="container">
+            <div class="location-container">
+                <div class="location-content">
+                    <h2>Prime Chelsea Location</h2>
+                    <p>Conveniently located in the heart of Manhattan with easy access from anywhere in NYC.</p>
+
+                    <div class="location-details">
+                        <div class="location-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            <div>
+                                <strong>Address</strong>
+                                <span>253 West 28th Street, 3rd & 4th Floor<br>New York, NY 10001</span>
+                            </div>
+                        </div>
+                        <div class="location-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                            </svg>
+                            <div>
+                                <strong>Contact</strong>
+                                <span><a href="tel:+19177407612">(917) 740-7612</a><br><a href="mailto:hello@mcmcreativeproductions.com">hello@mcmcreativeproductions.com</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="location-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.789!2d-73.9965!3d40.7489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQ0JzU2LjAiTiA3M8KwNTknNDcuNCJX!5e0!3m2!1sen!2sus!4v1600000000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Ready to Book NYC's Premier Green Screen Studio?</h2>
+            <p>Get a personalized quote for your production. Same-day response guaranteed.</p>
+
+            <div class="cta-buttons">
+                <a href="#quote-form" class="btn btn-green btn-large">Request a Quote</a>
+                <a href="tel:+19177407612" class="btn btn-secondary btn-large">Call (917) 740-7612</a>
+            </div>
+
+            <div class="cta-contact">
+                <a href="mailto:hello@mcmcreativeproductions.com">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                        <polyline points="22,6 12,13 2,6"/>
+                    </svg>
+                    hello@mcmcreativeproductions.com
+                </a>
+                <a href="https://www.mcmstages.com" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <line x1="2" y1="12" x2="22" y2="12"/>
+                        <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+                    </svg>
+                    www.mcmstages.com
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3 class="footer-title">Contact Us</h3>
+                    <div class="footer-contact">
+                        <p><strong>Phone:</strong> <a href="tel:+19177407612">(917) 740-7612</a></p>
+                        <p><strong>Email:</strong> <a href="mailto:hello@mcmcreativeproductions.com">hello@mcmcreativeproductions.com</a></p>
+                        <p><strong>Address:</strong> 253 West 28th Street, Chelsea, NYC</p>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-title">Our Studios</h3>
+                    <ul class="footer-links">
+                        <li><a href="/landing-pages/white-cyc-studio.html">White Cyc Studio</a></li>
+                        <li><a href="/landing-pages/green-screen-studio.html">Green Screen Studio</a></li>
+                        <li><a href="/landing-pages/kitchen-studio.html">Kitchen Studio</a></li>
+                        <li><a href="https://www.mcmstages.com" target="_blank" rel="noopener">All Studios</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-title">Why MCM</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Live Keying Capabilities</a></li>
+                        <li><a href="#">In-House Crew</a></li>
+                        <li><a href="#">Full Post-Production</a></li>
+                        <li><a href="#">Equipment Rental</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 MCM Creative Studios. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Sticky CTA -->
+    <div class="mobile-sticky-cta">
+        <a href="tel:+19177407612" class="btn btn-secondary">Call Now</a>
+        <a href="#quote-form" class="btn btn-green">Get Quote</a>
+    </div>
+
+    <!-- Form Validation Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('leadForm');
+
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                let isValid = true;
+                const requiredFields = form.querySelectorAll('[required]');
+
+                requiredFields.forEach(function(field) {
+                    const errorMessage = field.parentElement.querySelector('.error-message');
+
+                    if (!field.value.trim()) {
+                        isValid = false;
+                        field.classList.add('error');
+                        if (errorMessage) {
+                            errorMessage.textContent = 'This field is required';
+                            errorMessage.classList.add('visible');
+                        }
+                    } else {
+                        field.classList.remove('error');
+                        if (errorMessage) {
+                            errorMessage.classList.remove('visible');
+                        }
+                    }
+
+                    if (field.type === 'email' && field.value) {
+                        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                        if (!emailRegex.test(field.value)) {
+                            isValid = false;
+                            field.classList.add('error');
+                            if (errorMessage) {
+                                errorMessage.textContent = 'Please enter a valid email';
+                                errorMessage.classList.add('visible');
+                            }
+                        }
+                    }
+                });
+
+                if (isValid) {
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'form_submission', {
+                            'form_location': 'green_screen_studio'
+                        });
+                    }
+                    alert('Thank you! We will contact you within 24 hours.');
+                    form.reset();
+                }
+            });
+
+            form.querySelectorAll('input, select').forEach(function(field) {
+                field.addEventListener('blur', function() {
+                    const errorMessage = field.parentElement.querySelector('.error-message');
+                    if (field.hasAttribute('required') && !field.value.trim()) {
+                        field.classList.add('error');
+                        if (errorMessage) {
+                            errorMessage.textContent = 'This field is required';
+                            errorMessage.classList.add('visible');
+                        }
+                    } else {
+                        field.classList.remove('error');
+                        if (errorMessage) {
+                            errorMessage.classList.remove('visible');
+                        }
+                    }
+                });
+            });
+
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'phone_click', {
+                            'phone_number': '9177407612'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
