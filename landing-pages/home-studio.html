@@ -359,10 +359,17 @@
         }
 
         .trust-logo {
-            font-size: 1rem;
-            font-weight: 700;
-            color: var(--color-grey-300);
-            opacity: 0.7;
+            height: 24px;
+            width: auto;
+            max-width: 100px;
+            object-fit: contain;
+            opacity: 0.8;
+            filter: brightness(0) invert(1);
+            transition: opacity var(--transition-base);
+        }
+
+        .trust-logo:hover {
+            opacity: 1;
         }
 
         /* ========================================
@@ -503,10 +510,17 @@
         }
 
         .logo-item {
-            font-size: 1rem;
-            font-weight: 700;
-            color: var(--color-grey-300);
+            height: 28px;
+            width: auto;
+            max-width: 120px;
+            object-fit: contain;
             opacity: 0.8;
+            filter: brightness(0) invert(1);
+            transition: opacity var(--transition-base);
+        }
+
+        .logo-item:hover {
+            opacity: 1;
         }
 
         /* ========================================
@@ -1362,11 +1376,11 @@
                 </div>
 
                 <div class="trust-logos">
-                    <span class="trust-logos-label">Shot Here:</span>
-                    <span class="trust-logo">National Archives</span>
-                    <span class="trust-logo">Team Human</span>
-                    <span class="trust-logo">FEIT</span>
-                    <span class="trust-logo">Power of Z</span>
+                    <span class="trust-logos-label">Trusted by:</span>
+                    <img src="../logos/HBO copy.png" alt="HBO" class="trust-logo">
+                    <img src="../logos/netflix-logo-white-png-900x244.png" alt="Netflix" class="trust-logo">
+                    <img src="../logos/Vice.png" alt="Vice" class="trust-logo">
+                    <img src="../logos/PBS.png" alt="PBS" class="trust-logo">
                 </div>
             </div>
 
@@ -1427,12 +1441,13 @@
     <section class="social-proof">
         <div class="container">
             <div class="social-proof-content">
-                <span class="social-proof-label">Shot Here:</span>
+                <span class="social-proof-label">Trusted by:</span>
                 <div class="logo-carousel">
-                    <span class="logo-item">National Archives Foundation</span>
-                    <span class="logo-item">Team Human Podcast</span>
-                    <span class="logo-item">FEIT</span>
-                    <span class="logo-item">Power of Z</span>
+                    <img src="../logos/HBO copy.png" alt="HBO" class="logo-item">
+                    <img src="../logos/netflix-logo-white-png-900x244.png" alt="Netflix" class="logo-item">
+                    <img src="../logos/Vice.png" alt="Vice" class="logo-item">
+                    <img src="../logos/PBS.png" alt="PBS" class="logo-item">
+                    <img src="../logos/Ogilvy.png" alt="Ogilvy" class="logo-item">
                 </div>
             </div>
         </div>

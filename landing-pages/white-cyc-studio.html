@@ -343,10 +343,17 @@
         }
 
         .trust-logo {
-            font-size: 1rem;
-            font-weight: 700;
-            color: var(--color-grey-300);
-            opacity: 0.7;
+            height: 24px;
+            width: auto;
+            max-width: 100px;
+            object-fit: contain;
+            opacity: 0.8;
+            filter: brightness(0) invert(1);
+            transition: opacity var(--transition-base);
+        }
+
+        .trust-logo:hover {
+            opacity: 1;
         }
 
         /* ========================================
@@ -487,10 +494,17 @@
         }
 
         .logo-item {
-            font-size: 1rem;
-            font-weight: 700;
-            color: var(--color-grey-300);
+            height: 28px;
+            width: auto;
+            max-width: 120px;
+            object-fit: contain;
             opacity: 0.8;
+            filter: brightness(0) invert(1);
+            transition: opacity var(--transition-base);
+        }
+
+        .logo-item:hover {
+            opacity: 1;
         }
 
         /* ========================================
@@ -1512,10 +1526,10 @@
 
                 <div class="trust-logos">
                     <span class="trust-logos-label">Trusted by:</span>
-                    <span class="trust-logo">A24</span>
-                    <span class="trust-logo">HBO</span>
-                    <span class="trust-logo">Netflix</span>
-                    <span class="trust-logo">Food Network</span>
+                    <img src="../logos/HBO copy.png" alt="HBO" class="trust-logo">
+                    <img src="../logos/netflix-logo-white-png-900x244.png" alt="Netflix" class="trust-logo">
+                    <img src="../logos/food network.png" alt="Food Network" class="trust-logo">
+                    <img src="../logos/Youtube.png" alt="YouTube" class="trust-logo">
                 </div>
             </div>
 
@@ -1579,12 +1593,12 @@
             <div class="social-proof-content">
                 <span class="social-proof-label">As Seen On:</span>
                 <div class="logo-carousel">
-                    <span class="logo-item">A24 Films</span>
-                    <span class="logo-item">HBO</span>
-                    <span class="logo-item">Diary of a CEO</span>
-                    <span class="logo-item">Netflix</span>
-                    <span class="logo-item">Caesar's Sportsbook</span>
-                    <span class="logo-item">BookClub</span>
+                    <img src="../logos/HBO copy.png" alt="HBO" class="logo-item">
+                    <img src="../logos/diary_of_a_ceo_logo.webp" alt="Diary of a CEO" class="logo-item">
+                    <img src="../logos/netflix-logo-white-png-900x244.png" alt="Netflix" class="logo-item">
+                    <img src="../logos/Spotify_Logo_RGB_White.png" alt="Spotify" class="logo-item">
+                    <img src="../logos/Youtube.png" alt="YouTube" class="logo-item">
+                    <img src="../logos/Vice.png" alt="Vice" class="logo-item">
                 </div>
             </div>
         </div>

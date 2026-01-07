@@ -359,10 +359,17 @@
         }
 
         .trust-logo {
-            font-size: 1rem;
-            font-weight: 700;
-            color: var(--color-grey-300);
-            opacity: 0.7;
+            height: 24px;
+            width: auto;
+            max-width: 100px;
+            object-fit: contain;
+            opacity: 0.8;
+            filter: brightness(0) invert(1);
+            transition: opacity var(--transition-base);
+        }
+
+        .trust-logo:hover {
+            opacity: 1;
         }
 
         /* ========================================
@@ -503,10 +510,17 @@
         }
 
         .logo-item {
-            font-size: 1rem;
-            font-weight: 700;
-            color: var(--color-grey-300);
+            height: 28px;
+            width: auto;
+            max-width: 120px;
+            object-fit: contain;
             opacity: 0.8;
+            filter: brightness(0) invert(1);
+            transition: opacity var(--transition-base);
+        }
+
+        .logo-item:hover {
+            opacity: 1;
         }
 
         /* ========================================
@@ -1363,10 +1377,10 @@
 
                 <div class="trust-logos">
                     <span class="trust-logos-label">Featured On:</span>
-                    <span class="trust-logo">Food Network</span>
-                    <span class="trust-logo">PBS</span>
-                    <span class="trust-logo">CBS</span>
-                    <span class="trust-logo">BET</span>
+                    <img src="../logos/food network.png" alt="Food Network" class="trust-logo">
+                    <img src="../logos/PBS.png" alt="PBS" class="trust-logo">
+                    <img src="../logos/BET_logo.png" alt="BET" class="trust-logo">
+                    <img src="../logos/Hot ones logo (1).png" alt="Hot Ones" class="trust-logo">
                 </div>
             </div>
 
@@ -1429,12 +1443,10 @@
             <div class="social-proof-content">
                 <span class="social-proof-label">Shot Here:</span>
                 <div class="logo-carousel">
-                    <span class="logo-item">Rachael Ray</span>
-                    <span class="logo-item">Food Network</span>
-                    <span class="logo-item">Hot Ones</span>
-                    <span class="logo-item">PBS</span>
-                    <span class="logo-item">BET</span>
-                    <span class="logo-item">CBS Mornings</span>
+                    <img src="../logos/food network.png" alt="Food Network" class="logo-item">
+                    <img src="../logos/Hot ones logo (1).png" alt="Hot Ones" class="logo-item">
+                    <img src="../logos/PBS.png" alt="PBS" class="logo-item">
+                    <img src="../logos/BET_logo.png" alt="BET" class="logo-item">
                 </div>
             </div>
         </div>
