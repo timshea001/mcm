@@ -6,432 +6,1029 @@
     <title>AI Video Production Company | AI Commercial & Marketing Video Agency | Gold Leader</title>
     <meta name="description" content="NYC's leading AI video production agency. Create stunning AI-powered commercials, marketing videos, and brand content. Combine cutting-edge AI with professional production expertise.">
 
-    <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="styles.css">
+    <meta property="og:title" content="AI Video Production Company | Gold Leader">
+    <meta property="og:description" content="NYC's leading AI video production agency. AI-powered commercials, marketing videos, and brand content.">
+    <meta property="og:type" content="website">
 
-    <!-- Page-specific styles for AI theme -->
     <style>
-        .hero-background {
-            background: linear-gradient(135deg, #0a0a1a 0%, #1a0a2e 50%, #0a1a2a 100%);
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --color-primary: #8B5CF6;
+            --color-primary-dark: #7C3AED;
+            --color-accent: #00D9FF;
+            --color-dark: #0A0A0B;
+            --color-dark-secondary: #131316;
+            --color-dark-tertiary: #1C1C21;
+            --color-text: #FFFFFF;
+            --color-text-secondary: #A1A1AA;
+            --color-text-muted: #71717A;
+            --color-border: #27272A;
+            --color-success: #10B981;
+            --font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --radius: 8px;
+            --radius-lg: 16px;
+            --transition: 200ms ease;
+        }
+
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-family);
+            background: var(--color-dark);
+            color: var(--color-text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(10, 10, 11, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 72px;
+        }
+
+        .logo {
+            font-size: 1.125rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: var(--color-text);
+            text-decoration: none;
+        }
+
+        .header-cta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .header-phone {
+            color: var(--color-text-secondary);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            display: none;
+        }
+
+        @media (min-width: 640px) {
+            .header-phone {
+                display: block;
+            }
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            border-radius: var(--radius);
+            text-decoration: none;
+            transition: all var(--transition);
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+            color: var(--color-text);
+        }
+
+        .btn-primary:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--color-text);
+            border: 1px solid var(--color-border);
+        }
+
+        .btn-secondary:hover {
+            background: var(--color-dark-tertiary);
+            border-color: var(--color-text-muted);
+        }
+
+        .btn-lg {
+            padding: 14px 28px;
+            font-size: 1rem;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 160px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1000px;
+            height: 800px;
+            background: radial-gradient(ellipse at center, rgba(139, 92, 246, 0.2) 0%, rgba(0, 217, 255, 0.1) 40%, transparent 70%);
+            pointer-events: none;
         }
 
         .hero-badge {
-            background: rgba(138, 43, 226, 0.2);
-            border-color: #8B5CF6;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: rgba(139, 92, 246, 0.15);
+            border: 1px solid rgba(139, 92, 246, 0.4);
+            border-radius: 100px;
+            font-size: 0.8125rem;
+            font-weight: 500;
             color: #A78BFA;
+            margin-bottom: 24px;
         }
 
-        .ai-gradient-text {
-            background: linear-gradient(135deg, #00D9FF 0%, #8B5CF6 50%, #EC4899 100%);
+        .hero-badge-dot {
+            width: 8px;
+            height: 8px;
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+            border-radius: 50%;
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-primary) 50%, #EC4899 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
 
-        .ai-features-section {
-            padding: var(--spacing-3xl) 0;
-            background: linear-gradient(180deg, #0a0a1a 0%, #111827 100%);
-            color: var(--color-white);
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--color-text-secondary);
+            max-width: 650px;
+            margin: 0 auto 40px;
+            line-height: 1.7;
         }
 
-        .ai-features-section .section-title {
-            color: var(--color-white);
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            flex-wrap: wrap;
+            margin-bottom: 48px;
         }
 
-        .ai-features-section .section-subtitle {
-            color: var(--color-grey-400);
+        .hero-stat {
+            text-align: center;
         }
 
-        .ai-feature-grid {
+        .hero-stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--color-text);
+            letter-spacing: -0.02em;
+        }
+
+        .hero-stat-label {
+            font-size: 0.8125rem;
+            color: var(--color-text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .hero-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            opacity: 0.6;
+        }
+
+        .hero-logos img {
+            height: 24px;
+            width: auto;
+            filter: brightness(0) invert(1);
+        }
+
+        /* Form Section */
+        .form-section {
+            padding: 80px 0;
+            background: var(--color-dark-secondary);
+            border-top: 1px solid var(--color-border);
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .form-section-inner {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .form-header h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: -0.02em;
+        }
+
+        .form-header p {
+            color: var(--color-text-secondary);
+        }
+
+        .lead-form {
             display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
+            gap: 20px;
+        }
+
+        .form-row {
+            display: grid;
+            gap: 20px;
+        }
+
+        @media (min-width: 640px) {
+            .form-row {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: var(--color-text-secondary);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 16px;
+            background: var(--color-dark);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+            color: var(--color-text);
+            font-family: var(--font-family);
+            font-size: 1rem;
+            transition: border-color var(--transition);
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: var(--color-text-muted);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--color-primary);
+        }
+
+        .form-group select {
+            cursor: pointer;
+        }
+
+        .form-group input.error,
+        .form-group select.error {
+            border-color: #EF4444;
+        }
+
+        .error-message {
+            color: #EF4444;
+            font-size: 0.8125rem;
+            margin-top: 6px;
+            display: none;
+        }
+
+        .error-message.visible {
+            display: block;
+        }
+
+        .form-submit {
+            margin-top: 12px;
+        }
+
+        .form-submit .btn {
+            width: 100%;
+            padding: 16px;
+            font-size: 1rem;
+        }
+
+        .form-footer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 16px;
+            font-size: 0.8125rem;
+            color: var(--color-text-muted);
+        }
+
+        .form-footer svg {
+            width: 16px;
+            height: 16px;
+            color: var(--color-success);
+        }
+
+        /* AI Features Section */
+        .features-section {
+            padding: 100px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+
+        .section-label {
+            display: inline-block;
+            font-size: 0.8125rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 16px;
+        }
+
+        .section-title {
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
+        }
+
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: var(--color-text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            gap: 24px;
         }
 
         @media (min-width: 768px) {
-            .ai-feature-grid {
+            .features-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
 
         @media (min-width: 1024px) {
-            .ai-feature-grid {
+            .features-grid {
                 grid-template-columns: repeat(3, 1fr);
             }
         }
 
-        .ai-feature-card {
-            padding: 2rem;
-            background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(0, 217, 255, 0.05) 100%);
-            border: 1px solid rgba(139, 92, 246, 0.3);
+        .feature-card {
+            padding: 32px;
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.08) 0%, rgba(0, 217, 255, 0.04) 100%);
+            border: 1px solid rgba(139, 92, 246, 0.2);
             border-radius: var(--radius-lg);
-            transition: transform var(--transition-base), border-color var(--transition-base);
+            transition: border-color var(--transition), transform var(--transition);
         }
 
-        .ai-feature-card:hover {
-            transform: translateY(-4px);
-            border-color: rgba(139, 92, 246, 0.6);
+        .feature-card:hover {
+            border-color: rgba(139, 92, 246, 0.5);
+            transform: translateY(-2px);
         }
 
-        .ai-feature-card .feature-icon {
-            background: linear-gradient(135deg, #8B5CF6 0%, #00D9FF 100%);
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+            border-radius: var(--radius);
+            margin-bottom: 20px;
         }
 
-        .ai-feature-card h3 {
-            color: var(--color-white);
-            margin-bottom: 0.75rem;
+        .feature-icon svg {
+            width: 24px;
+            height: 24px;
+            color: var(--color-text);
         }
 
-        .ai-feature-card p {
-            color: var(--color-grey-400);
+        .feature-card h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            letter-spacing: -0.01em;
         }
 
+        .feature-card p {
+            font-size: 0.9375rem;
+            color: var(--color-text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Comparison Section */
         .comparison-section {
-            padding: var(--spacing-3xl) 0;
-            background: var(--color-white);
+            padding: 100px 0;
+            background: var(--color-dark-secondary);
+            border-top: 1px solid var(--color-border);
+            border-bottom: 1px solid var(--color-border);
         }
 
         .comparison-table-wrapper {
             overflow-x: auto;
+            margin-top: 48px;
         }
 
         .comparison-table {
             width: 100%;
             border-collapse: collapse;
-            background: var(--color-white);
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            box-shadow: var(--shadow-lg);
-        }
-
-        .comparison-table thead {
-            background: var(--color-black);
-            color: var(--color-white);
+            min-width: 600px;
         }
 
         .comparison-table th,
         .comparison-table td {
-            padding: 1rem 1.5rem;
+            padding: 16px 20px;
             text-align: left;
+            border-bottom: 1px solid var(--color-border);
         }
 
         .comparison-table th {
-            font-weight: 700;
+            font-size: 0.8125rem;
+            font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
-            font-size: 0.875rem;
+            letter-spacing: 0.05em;
+            color: var(--color-text-muted);
+            background: var(--color-dark);
         }
 
-        .comparison-table tbody tr {
-            border-bottom: 1px solid var(--color-grey-200);
+        .comparison-table th.highlight {
+            color: var(--color-primary);
         }
 
-        .comparison-table tbody tr:last-child {
-            border-bottom: none;
+        .comparison-table td {
+            font-size: 0.9375rem;
+            color: var(--color-text-secondary);
+        }
+
+        .comparison-table td.highlight {
+            color: var(--color-accent);
+            font-weight: 500;
         }
 
         .comparison-table tbody tr:hover {
-            background: var(--color-grey-50);
+            background: rgba(139, 92, 246, 0.05);
         }
 
-        .comparison-table .check {
-            color: #10B981;
-            font-weight: 700;
-        }
-
-        .comparison-table .highlight-col {
-            background: rgba(0, 217, 255, 0.1);
-        }
-
-        .comparison-table thead .highlight-col {
-            background: var(--color-accent);
-            color: var(--color-black);
-        }
-
+        /* Use Cases */
         .use-cases-section {
-            padding: var(--spacing-3xl) 0;
-            background: var(--color-grey-50);
+            padding: 100px 0;
         }
 
-        .use-case-grid {
+        .use-cases-grid {
             display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
+            gap: 24px;
         }
 
         @media (min-width: 768px) {
-            .use-case-grid {
+            .use-cases-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
 
         .use-case-card {
-            padding: 2rem;
-            background: var(--color-white);
+            padding: 32px;
+            background: var(--color-dark-secondary);
+            border: 1px solid var(--color-border);
             border-radius: var(--radius-lg);
-            border: 1px solid var(--color-grey-200);
-            transition: transform var(--transition-base), box-shadow var(--transition-base);
+            transition: border-color var(--transition), transform var(--transition);
         }
 
         .use-case-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-lg);
+            border-color: var(--color-text-muted);
+            transform: translateY(-2px);
         }
 
         .use-case-card h3 {
             font-size: 1.25rem;
-            margin-bottom: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 12px;
             display: flex;
             align-items: center;
-            gap: 0.75rem;
+            gap: 12px;
         }
 
         .use-case-card h3 svg {
             width: 24px;
             height: 24px;
-            color: var(--color-accent);
+            color: var(--color-primary);
         }
 
         .use-case-card p {
-            color: var(--color-grey-600);
-            margin-bottom: 1rem;
+            font-size: 0.9375rem;
+            color: var(--color-text-secondary);
+            margin-bottom: 16px;
+            line-height: 1.6;
         }
 
-        .use-case-card ul {
+        .use-case-list {
             list-style: none;
         }
 
-        .use-case-card ul li {
-            padding: 0.375rem 0;
-            padding-left: 1.5rem;
+        .use-case-list li {
+            padding: 8px 0;
+            padding-left: 20px;
             position: relative;
-            color: var(--color-grey-700);
             font-size: 0.9375rem;
+            color: var(--color-text-secondary);
         }
 
-        .use-case-card ul li::before {
+        .use-case-list li::before {
             content: ">";
             position: absolute;
             left: 0;
             color: var(--color-accent);
+            font-weight: 600;
+        }
+
+        /* Benefits */
+        .benefits-section {
+            padding: 100px 0;
+            background: var(--color-dark-secondary);
+            border-top: 1px solid var(--color-border);
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .benefits-grid {
+            display: grid;
+            gap: 48px;
+        }
+
+        @media (min-width: 768px) {
+            .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .benefits-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .benefit-item {
+            display: flex;
+            gap: 16px;
+        }
+
+        .benefit-icon {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(139, 92, 246, 0.15);
+            border-radius: var(--radius);
+        }
+
+        .benefit-icon svg {
+            width: 20px;
+            height: 20px;
+            color: var(--color-primary);
+        }
+
+        .benefit-content h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .benefit-content p {
+            font-size: 0.875rem;
+            color: var(--color-text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Testimonials */
+        .testimonials-section {
+            padding: 100px 0;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            gap: 24px;
+        }
+
+        @media (min-width: 768px) {
+            .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .testimonial-card {
+            padding: 32px;
+            background: var(--color-dark-secondary);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+        }
+
+        .testimonial-stars {
+            display: flex;
+            gap: 4px;
+            margin-bottom: 16px;
+        }
+
+        .testimonial-stars svg {
+            width: 18px;
+            height: 18px;
+            fill: #FBBF24;
+            color: #FBBF24;
+        }
+
+        .testimonial-quote {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--color-text-secondary);
+            margin-bottom: 20px;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            font-size: 0.9375rem;
+        }
+
+        .testimonial-role {
+            font-size: 0.8125rem;
+            color: var(--color-text-muted);
+        }
+
+        /* FAQ */
+        .faq-section {
+            padding: 100px 0;
+            background: var(--color-dark-secondary);
+            border-top: 1px solid var(--color-border);
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .faq-list {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 24px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: transparent;
+            border: none;
+            font-family: var(--font-family);
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--color-text);
+            text-align: left;
+            cursor: pointer;
+            transition: color var(--transition);
+        }
+
+        .faq-question:hover {
+            color: var(--color-primary);
+        }
+
+        .faq-icon {
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: var(--color-text-muted);
+            transition: transform var(--transition);
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+        }
+
+        .faq-answer p {
+            padding-bottom: 24px;
+            color: var(--color-text-secondary);
+            line-height: 1.7;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
             font-weight: 700;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+
+        .cta-section p {
+            font-size: 1.125rem;
+            color: var(--color-text-secondary);
+            margin-bottom: 32px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 64px 0 32px;
+            border-top: 1px solid var(--color-border);
+        }
+
+        .footer-grid {
+            display: grid;
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 2fr 1fr 1fr;
+            }
+        }
+
+        .footer-brand p {
+            color: var(--color-text-secondary);
+            font-size: 0.9375rem;
+            margin-top: 16px;
+            max-width: 300px;
+        }
+
+        .footer-title {
+            font-size: 0.8125rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--color-text-muted);
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: var(--color-text-secondary);
+            text-decoration: none;
+            font-size: 0.9375rem;
+            transition: color var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--color-text);
+        }
+
+        .footer-bottom {
+            padding-top: 32px;
+            border-top: 1px solid var(--color-border);
+            text-align: center;
+            color: var(--color-text-muted);
+            font-size: 0.875rem;
+        }
+
+        /* Mobile CTA */
+        .mobile-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 16px;
+            background: var(--color-dark);
+            border-top: 1px solid var(--color-border);
+            z-index: 90;
+            display: flex;
+            gap: 12px;
+        }
+
+        .mobile-cta .btn {
+            flex: 1;
+        }
+
+        @media (min-width: 768px) {
+            .mobile-cta {
+                display: none;
+            }
+        }
+
+        @media (max-width: 767px) {
+            body {
+                padding-bottom: 80px;
+            }
         }
     </style>
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="AI Video Production Company | Gold Leader">
-    <meta property="og:description" content="NYC's leading AI video production agency. AI-powered commercials, marketing videos, and brand content with professional production quality.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://goldleader.ai/ai-video-production">
-
-    <!-- Schema.org markup -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "VideoProductionCompany",
-      "name": "Gold Leader - AI Video Production",
-      "description": "NYC's leading AI video production agency combining cutting-edge AI technology with professional production expertise.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "253 West 28th Street",
-        "addressLocality": "New York",
-        "addressRegion": "NY",
-        "postalCode": "10001",
-        "addressCountry": "US"
-      },
-      "url": "https://goldleader.ai/ai-video-production",
-      "telephone": "+19177407612",
-      "priceRange": "$$$",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "89"
-      },
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "AI Video Production Services",
-        "itemListElement": [
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "AI Commercial Production"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "AI Marketing Video Production"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "AI-Enhanced Post-Production"}}
-        ]
-      }
-    }
-    </script>
 </head>
 <body>
-    <!-- Sticky Header -->
-    <header class="sticky-header">
-        <div class="container header-content">
-            <a href="/" class="logo">
-                <img src="../logos/goldleader-logo.svg" alt="Gold Leader" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                <span class="logo-text" style="display:none;">GOLD LEADER</span>
-            </a>
-            <div class="header-actions">
-                <a href="tel:+19177407612" class="phone-link">(917) 740-7612</a>
-                <a href="#quote-form" class="btn btn-primary btn-small">Get Quote</a>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="/" class="logo">Gold Leader</a>
+                <div class="header-cta">
+                    <a href="tel:+19177407612" class="header-phone">(917) 740-7612</a>
+                    <a href="#form" class="btn btn-primary">Get Quote</a>
+                </div>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section class="hero">
-        <div class="hero-background">
-            <div class="hero-overlay"></div>
-        </div>
-        <div class="container hero-container">
-            <div class="hero-content">
-                <span class="hero-badge">AI Video Production Agency</span>
-                <h1 class="hero-title"><span class="ai-gradient-text">AI-Powered</span> Video Production for the Modern Brand</h1>
-                <p class="hero-subtitle">Combine cutting-edge AI technology with 20+ years of professional production expertise. Create stunning commercials, marketing videos, and brand content faster and smarter.</p>
+        <div class="container">
+            <div class="hero-badge">
+                <span class="hero-badge-dot"></span>
+                AI Video Production Agency
+            </div>
+            <h1 class="hero-title"><span class="gradient-text">AI-Powered</span> Video Production for Modern Brands</h1>
+            <p class="hero-subtitle">Combine cutting-edge AI technology with 20+ years of professional production expertise. Create stunning commercials, marketing videos, and brand content faster and smarter.</p>
 
-                <div class="hero-features">
-                    <div class="hero-feature">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
-                        <span>AI + Human Creativity</span>
-                    </div>
-                    <div class="hero-feature">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
-                        <span>50% Faster Delivery</span>
-                    </div>
-                    <div class="hero-feature">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
-                        <span>Cost-Effective Scaling</span>
-                    </div>
-                    <div class="hero-feature">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
-                        <span>Enterprise Quality</span>
-                    </div>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <div class="hero-stat-value">50%</div>
+                    <div class="hero-stat-label">Faster Delivery</div>
                 </div>
-
-                <div class="trust-logos">
-                    <span class="trust-logos-label">Trusted by:</span>
-                    <img src="../logos/Nike.png" alt="Nike" class="trust-logo">
-                    <img src="../logos/HBO copy.png" alt="HBO" class="trust-logo">
-                    <img src="../logos/Universal.png" alt="Universal" class="trust-logo">
-                    <img src="../logos/Spotify_Logo_RGB_White.png" alt="Spotify" class="trust-logo">
+                <div class="hero-stat">
+                    <div class="hero-stat-value">10x</div>
+                    <div class="hero-stat-label">Content Scale</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-value">50+</div>
+                    <div class="hero-stat-label">Languages</div>
                 </div>
             </div>
 
-            <!-- Lead Form -->
-            <div class="lead-form-card" id="quote-form">
-                <h3 class="form-title">Get Your AI Video Quote</h3>
-                <p class="form-subtitle">Discover what's possible with AI production</p>
+            <div class="hero-logos">
+                <img src="../logos/Nike.png" alt="Nike">
+                <img src="../logos/HBO copy.png" alt="HBO">
+                <img src="../logos/Universal.png" alt="Universal">
+                <img src="../logos/Spotify_Logo_RGB_White.png" alt="Spotify">
+                <img src="../logos/Ogilvy.png" alt="Ogilvy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="form-section" id="form">
+        <div class="container">
+            <div class="form-section-inner">
+                <div class="form-header">
+                    <h2>Get Your AI Video Quote</h2>
+                    <p>Discover what's possible with AI-powered production.</p>
+                </div>
+
                 <form id="leadForm" class="lead-form" novalidate>
                     <div class="form-row">
                         <div class="form-group">
-                            <input type="text" id="firstName" name="firstName" placeholder="First Name*" required>
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" name="firstName" placeholder="John" required>
                             <span class="error-message"></span>
                         </div>
                         <div class="form-group">
-                            <input type="text" id="lastName" name="lastName" placeholder="Last Name*" required>
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" placeholder="Smith" required>
+                            <span class="error-message"></span>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Work Email</label>
+                            <input type="email" id="email" name="email" placeholder="john@company.com" required>
+                            <span class="error-message"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required>
                             <span class="error-message"></span>
                         </div>
                     </div>
                     <div class="form-group">
-                        <input type="text" id="company" name="company" placeholder="Company Name">
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Work Email*" required>
-                        <span class="error-message"></span>
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" id="phone" name="phone" placeholder="Phone*" required>
-                        <span class="error-message"></span>
-                    </div>
-                    <div class="form-group">
+                        <label for="projectType">Project Type</label>
                         <select id="projectType" name="projectType" required>
-                            <option value="">Select Project Type*</option>
+                            <option value="">Select project type...</option>
                             <option value="ai-commercial">AI Commercial Production</option>
                             <option value="ai-marketing">AI Marketing Video</option>
                             <option value="ai-social">AI Social Media Content</option>
-                            <option value="ai-product">AI Product Demo</option>
+                            <option value="ai-localization">AI Localization / Dubbing</option>
                             <option value="ai-personalization">AI Video Personalization</option>
-                            <option value="ai-localization">AI Localization/Dubbing</option>
-                            <option value="ai-enhancement">AI Post-Production Enhancement</option>
-                            <option value="other">Other AI Video Project</option>
+                            <option value="ai-enhancement">AI Post-Production</option>
+                            <option value="other">Other</option>
                         </select>
                         <span class="error-message"></span>
                     </div>
                     <div class="form-group">
-                        <textarea id="message" name="message" placeholder="Tell us about your project (optional)" rows="3"></textarea>
+                        <label for="message">Tell us about your project (optional)</label>
+                        <textarea id="message" name="message" rows="3" placeholder="What are you looking to create?"></textarea>
                     </div>
-                    <div class="form-cta-wrapper">
-                        <button type="submit" class="btn btn-primary btn-block">Get AI Production Quote</button>
-                        <div class="form-trust">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-                            </svg>
-                            <span>Your info is secure & never shared</span>
-                        </div>
+                    <div class="form-submit">
+                        <button type="submit" class="btn btn-primary btn-lg">Get AI Production Quote</button>
+                    </div>
+                    <div class="form-footer">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                        <span>Your information is secure and never shared</span>
                     </div>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- Social Proof Bar -->
-    <section class="social-proof">
+    <!-- AI Features -->
+    <section class="features-section">
         <div class="container">
-            <div class="social-proof-content">
-                <span class="social-proof-label">Trusted by Industry Leaders:</span>
-                <div class="logo-carousel">
-                    <img src="../logos/Nike.png" alt="Nike" class="logo-item">
-                    <img src="../logos/HBO copy.png" alt="HBO" class="logo-item">
-                    <img src="../logos/netflix-logo-white-png-900x244.png" alt="Netflix" class="logo-item">
-                    <img src="../logos/Spotify_Logo_RGB_White.png" alt="Spotify" class="logo-item">
-                    <img src="../logos/Ogilvy.png" alt="Ogilvy" class="logo-item">
-                    <img src="../logos/Dyson.png" alt="Dyson" class="logo-item">
-                </div>
+            <div class="section-header">
+                <div class="section-label">Capabilities</div>
+                <h2 class="section-title">AI-Powered Production</h2>
+                <p class="section-subtitle">Leverage cutting-edge AI while maintaining the quality that only humans can deliver.</p>
             </div>
-        </div>
-    </section>
 
-    <!-- AI Features Section -->
-    <section class="ai-features-section">
-        <div class="container">
-            <h2 class="section-title">AI-Powered Production Capabilities</h2>
-            <p class="section-subtitle">Leverage the latest AI technology while maintaining the quality and creativity that only humans can deliver.</p>
-
-            <div class="ai-feature-grid">
-                <div class="ai-feature-card">
+            <div class="features-grid">
+                <div class="feature-card">
                     <div class="feature-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-                            <path d="M2 17l10 5 10-5"/>
-                            <path d="M2 12l10 5 10-5"/>
+                            <rect x="3" y="3" width="18" height="18" rx="2"/>
+                            <circle cx="8.5" cy="8.5" r="1.5"/>
+                            <path d="M21 15l-5-5L5 21"/>
                         </svg>
                     </div>
                     <h3>AI-Generated Visuals</h3>
-                    <p>Create stunning backgrounds, environments, and visual effects using generative AI. Perfect for conceptual commercials and impossible-to-film scenarios.</p>
+                    <p>Create stunning backgrounds, environments, and effects. Perfect for conceptual commercials and impossible scenarios.</p>
                 </div>
 
-                <div class="ai-feature-card">
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 19l7-7 3 3-7 7-3-3z"/>
-                            <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
-                            <path d="M2 2l7.586 7.586"/>
-                            <circle cx="11" cy="11" r="2"/>
-                        </svg>
-                    </div>
-                    <h3>AI Video Enhancement</h3>
-                    <p>Upscale footage to 4K/8K, stabilize shaky video, and enhance colors automatically. Transform existing content into premium quality.</p>
-                </div>
-
-                <div class="ai-feature-card">
+                <div class="feature-card">
                     <div class="feature-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <circle cx="12" cy="12" r="10"/>
@@ -440,22 +1037,10 @@
                         </svg>
                     </div>
                     <h3>AI Dubbing & Localization</h3>
-                    <p>Translate and dub your videos into 50+ languages with natural-sounding AI voices that preserve the original speaker's tone and emotion.</p>
+                    <p>Translate videos into 50+ languages with natural AI voices that preserve tone and emotion.</p>
                 </div>
 
-                <div class="ai-feature-card">
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                            <circle cx="8.5" cy="8.5" r="1.5"/>
-                            <polyline points="21 15 16 10 5 21"/>
-                        </svg>
-                    </div>
-                    <h3>AI Background Removal</h3>
-                    <p>Instantly remove and replace backgrounds without green screens. Cut production costs and open creative possibilities.</p>
-                </div>
-
-                <div class="ai-feature-card">
+                <div class="feature-card">
                     <div class="feature-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
@@ -464,11 +1049,22 @@
                             <path d="M16 3.13a4 4 0 010 7.75"/>
                         </svg>
                     </div>
-                    <h3>AI Video Personalization</h3>
-                    <p>Create thousands of personalized video variants at scale. Perfect for account-based marketing and personalized customer communications.</p>
+                    <h3>AI Personalization</h3>
+                    <p>Create thousands of personalized video variants at scale for ABM and customer communications.</p>
                 </div>
 
-                <div class="ai-feature-card">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 19l7-7 3 3-7 7-3-3z"/>
+                            <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
+                        </svg>
+                    </div>
+                    <h3>AI Video Enhancement</h3>
+                    <p>Upscale to 4K/8K, stabilize footage, and enhance colors automatically. Transform existing content.</p>
+                </div>
+
+                <div class="feature-card">
                     <div class="feature-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
@@ -477,67 +1073,74 @@
                         </svg>
                     </div>
                     <h3>AI Voice & Audio</h3>
-                    <p>Generate professional voiceovers, clone brand voices ethically, and enhance audio quality automatically. No recording studio needed.</p>
+                    <p>Generate professional voiceovers, clone brand voices ethically, and enhance audio quality.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2"/>
+                            <path d="M9 3v18"/>
+                            <path d="M15 3v18"/>
+                            <path d="M3 9h18"/>
+                            <path d="M3 15h18"/>
+                        </svg>
+                    </div>
+                    <h3>AI Background Removal</h3>
+                    <p>Instantly remove and replace backgrounds without green screens. Cut production costs dramatically.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Comparison Section -->
+    <!-- Comparison -->
     <section class="comparison-section">
         <div class="container">
-            <h2 class="section-title">Traditional vs. AI-Powered Production</h2>
-            <p class="section-subtitle">See how AI enhances every aspect of video production while maintaining professional quality.</p>
+            <div class="section-header">
+                <div class="section-label">Comparison</div>
+                <h2 class="section-title">Traditional vs. AI Production</h2>
+                <p class="section-subtitle">See how AI enhances every aspect of video production.</p>
+            </div>
 
             <div class="comparison-table-wrapper">
                 <table class="comparison-table">
                     <thead>
                         <tr>
                             <th>Capability</th>
-                            <th>Traditional Production</th>
-                            <th class="highlight-col">Gold Leader AI Production</th>
+                            <th>Traditional</th>
+                            <th class="highlight">Gold Leader AI</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>Production Timeline</strong></td>
-                            <td>6-12 weeks typical</td>
-                            <td class="highlight-col"><span class="check">3-6 weeks</span> (50% faster)</td>
+                            <td>Production Timeline</td>
+                            <td>6-12 weeks</td>
+                            <td class="highlight">3-6 weeks (50% faster)</td>
                         </tr>
                         <tr>
-                            <td><strong>Content Variants</strong></td>
-                            <td>Manual editing for each</td>
-                            <td class="highlight-col"><span class="check">Hundreds at scale</span></td>
+                            <td>Content Variants</td>
+                            <td>Manual editing each</td>
+                            <td class="highlight">Hundreds at scale</td>
                         </tr>
                         <tr>
-                            <td><strong>Language Localization</strong></td>
-                            <td>Expensive voice talent per language</td>
-                            <td class="highlight-col"><span class="check">50+ languages instantly</span></td>
+                            <td>Language Localization</td>
+                            <td>Expensive per language</td>
+                            <td class="highlight">50+ languages instantly</td>
                         </tr>
                         <tr>
-                            <td><strong>Visual Effects</strong></td>
+                            <td>Visual Effects</td>
                             <td>Expensive CGI studios</td>
-                            <td class="highlight-col"><span class="check">AI-generated at fraction of cost</span></td>
+                            <td class="highlight">AI-generated at fraction of cost</td>
                         </tr>
                         <tr>
-                            <td><strong>Revisions</strong></td>
-                            <td>Each revision = more cost</td>
-                            <td class="highlight-col"><span class="check">Rapid iterations included</span></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Personalization</strong></td>
+                            <td>Personalization</td>
                             <td>Not feasible at scale</td>
-                            <td class="highlight-col"><span class="check">1000s of personalized videos</span></td>
+                            <td class="highlight">1000s of personalized videos</td>
                         </tr>
                         <tr>
-                            <td><strong>Legacy Content</strong></td>
+                            <td>Legacy Content</td>
                             <td>Reshoot or accept quality</td>
-                            <td class="highlight-col"><span class="check">AI enhancement & upscaling</span></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Creative Direction</strong></td>
-                            <td>Human expertise</td>
-                            <td class="highlight-col"><span class="check">Human expertise + AI tools</span></td>
+                            <td class="highlight">AI enhancement & upscaling</td>
                         </tr>
                     </tbody>
                 </table>
@@ -545,26 +1148,28 @@
         </div>
     </section>
 
-    <!-- Use Cases Section -->
+    <!-- Use Cases -->
     <section class="use-cases-section">
         <div class="container">
-            <h2 class="section-title">AI Video Production Use Cases</h2>
-            <p class="section-subtitle">Real applications where AI-powered production delivers exceptional results.</p>
+            <div class="section-header">
+                <div class="section-label">Use Cases</div>
+                <h2 class="section-title">AI Video Applications</h2>
+                <p class="section-subtitle">Real applications where AI production delivers exceptional results.</p>
+            </div>
 
-            <div class="use-case-grid">
+            <div class="use-cases-grid">
                 <div class="use-case-card">
                     <h3>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <polygon points="23 7 16 12 23 17 23 7"/>
-                            <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+                            <rect x="1" y="5" width="15" height="14" rx="2"/>
                         </svg>
                         AI Commercial Production
                     </h3>
-                    <p>Create high-impact commercials with AI-generated environments, characters, and effects that would be impossible or prohibitively expensive to film traditionally.</p>
-                    <ul>
+                    <p>Create high-impact commercials with AI-generated environments and effects that would be impossible to film traditionally.</p>
+                    <ul class="use-case-list">
                         <li>Fantasy/impossible scenarios</li>
                         <li>Product visualization</li>
-                        <li>Brand world-building</li>
                         <li>Rapid A/B testing</li>
                     </ul>
                 </div>
@@ -576,11 +1181,10 @@
                         </svg>
                         AI Marketing Videos
                     </h3>
-                    <p>Scale your marketing content production with AI. Generate hundreds of variants for different audiences, platforms, and campaigns from a single shoot.</p>
-                    <ul>
+                    <p>Scale your content production with AI. Generate hundreds of variants for different audiences and platforms.</p>
+                    <ul class="use-case-list">
                         <li>Dynamic content at scale</li>
-                        <li>Personalized video campaigns</li>
-                        <li>Automated versioning</li>
+                        <li>Personalized campaigns</li>
                         <li>Multi-platform optimization</li>
                     </ul>
                 </div>
@@ -594,11 +1198,10 @@
                         </svg>
                         Global Localization
                     </h3>
-                    <p>Take your content global with AI dubbing that preserves the original speaker's voice, tone, and emotion across 50+ languages.</p>
-                    <ul>
-                        <li>Natural-sounding AI voices</li>
+                    <p>Take your content global with AI dubbing that preserves voice, tone, and emotion across 50+ languages.</p>
+                    <ul class="use-case-list">
+                        <li>Natural AI voices</li>
                         <li>Lip-sync technology</li>
-                        <li>Cultural adaptation</li>
                         <li>Rapid market expansion</li>
                     </ul>
                 </div>
@@ -606,32 +1209,33 @@
                 <div class="use-case-card">
                     <h3>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <rect x="2" y="2" width="20" height="20" rx="5"/>
                             <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
                             <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
                         </svg>
                         AI Social Content
                     </h3>
-                    <p>Create scroll-stopping social content at the speed of culture. AI helps you produce more content, test more ideas, and iterate faster.</p>
-                    <ul>
+                    <p>Create scroll-stopping social content at the speed of culture. Produce more, test more, iterate faster.</p>
+                    <ul class="use-case-list">
                         <li>Rapid content creation</li>
                         <li>Trend response content</li>
                         <li>Automated reformatting</li>
-                        <li>Performance optimization</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Benefits Section -->
+    <!-- Benefits -->
     <section class="benefits-section">
         <div class="container">
-            <h2 class="section-title">Why Choose Gold Leader for AI Video</h2>
-            <p class="section-subtitle">We're not just an AI tool vendor. We're a full-service production company that strategically integrates AI.</p>
+            <div class="section-header">
+                <div class="section-label">Why Gold Leader</div>
+                <h2 class="section-title">AI + Human Expertise</h2>
+            </div>
 
             <div class="benefits-grid">
-                <div class="benefit-card">
+                <div class="benefit-item">
                     <div class="benefit-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M12 2L2 7l10 5 10-5-10-5z"/>
@@ -639,209 +1243,212 @@
                             <path d="M2 12l10 5 10-5"/>
                         </svg>
                     </div>
-                    <h3>AI + Human Expertise</h3>
-                    <p>Our team knows when AI enhances and when human creativity is essential. You get the best of both worlds, not just AI output.</p>
+                    <div class="benefit-content">
+                        <h3>Strategic AI Integration</h3>
+                        <p>We know when AI enhances and when human creativity is essential. Best of both worlds.</p>
+                    </div>
                 </div>
 
-                <div class="benefit-card">
+                <div class="benefit-item">
                     <div class="benefit-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
                             <polyline points="22 4 12 14.01 9 11.01"/>
                         </svg>
                     </div>
-                    <h3>Quality Guaranteed</h3>
-                    <p>AI-generated content reviewed and refined by professionals. No uncanny valley, no obvious AI artifacts, no brand risk.</p>
+                    <div class="benefit-content">
+                        <h3>Quality Guaranteed</h3>
+                        <p>All AI content reviewed by professionals. No uncanny valley, no brand risk.</p>
+                    </div>
                 </div>
 
-                <div class="benefit-card">
+                <div class="benefit-item">
                     <div class="benefit-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/>
-                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
-                            <line x1="12" y1="22.08" x2="12" y2="12"/>
+                            <path d="M3 21h18M5 21V7l7-4 7 4v14"/>
                         </svg>
                     </div>
-                    <h3>Full Production Infrastructure</h3>
-                    <p>In-house studios, equipment, and post-production. AI augments our capabilities, it doesn't replace them.</p>
+                    <div class="benefit-content">
+                        <h3>Full Infrastructure</h3>
+                        <p>In-house studios and post-production. AI augments our capabilities.</p>
+                    </div>
                 </div>
 
-                <div class="benefit-card">
+                <div class="benefit-item">
                     <div class="benefit-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77"/>
                         </svg>
                     </div>
-                    <h3>Cutting-Edge Tools</h3>
-                    <p>We invest in the latest AI tools and train constantly. Access to Runway, Pika, Midjourney, ElevenLabs, and more through one partner.</p>
+                    <div class="benefit-content">
+                        <h3>Cutting-Edge Tools</h3>
+                        <p>Access to Runway, Pika, Midjourney, ElevenLabs, and more through one partner.</p>
+                    </div>
                 </div>
 
-                <div class="benefit-card">
+                <div class="benefit-item">
                     <div class="benefit-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                            <rect x="3" y="11" width="18" height="11" rx="2"/>
                             <path d="M7 11V7a5 5 0 0110 0v4"/>
                         </svg>
                     </div>
-                    <h3>Ethical AI Use</h3>
-                    <p>Transparent about AI use. Proper licensing. No deepfakes. We follow industry best practices and emerging regulations.</p>
+                    <div class="benefit-content">
+                        <h3>Ethical AI Use</h3>
+                        <p>Transparent about AI use. Proper licensing. No deepfakes. Industry best practices.</p>
+                    </div>
                 </div>
 
-                <div class="benefit-card">
+                <div class="benefit-item">
                     <div class="benefit-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <circle cx="12" cy="12" r="10"/>
                             <polyline points="12 6 12 12 16 14"/>
                         </svg>
                     </div>
-                    <h3>Faster, Not Cheaper</h3>
-                    <p>We use AI to deliver better results faster, not to race to the bottom on price. Quality remains our north star.</p>
+                    <div class="benefit-content">
+                        <h3>Faster, Not Cheaper</h3>
+                        <p>We use AI to deliver better results faster. Quality remains our north star.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
+    <!-- Testimonials -->
     <section class="testimonials-section">
         <div class="container">
-            <h2 class="section-title">What Our AI Production Clients Say</h2>
-            <p class="section-subtitle">Forward-thinking brands using AI video production to gain competitive advantage.</p>
+            <div class="section-header">
+                <div class="section-label">Testimonials</div>
+                <h2 class="section-title">What Clients Say</h2>
+            </div>
 
-            <div class="testimonial-grid">
+            <div class="testimonials-grid">
                 <div class="testimonial-card">
-                    <p class="testimonial-quote">"Gold Leader helped us create 200 personalized videos for our ABM campaign in 3 weeks. Traditional production would have taken 6 months and 10x the budget. ROI was through the roof."</p>
+                    <div class="testimonial-stars">
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <p class="testimonial-quote">"Gold Leader helped us create 200 personalized videos for our ABM campaign in 3 weeks. Traditional production would have taken 6 months."</p>
                     <p class="testimonial-author">Rachel Martinez</p>
                     <p class="testimonial-role">CMO, B2B SaaS Platform</p>
-                    <div class="testimonial-rating">
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
                         <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                         <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                         <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                         <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                         <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                     </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <p class="testimonial-quote">"The AI-generated environments in our commercial looked incredible. Concepts that would have cost $500K in CGI were done for a fraction. And you couldn't tell it was AI."</p>
+                    <p class="testimonial-quote">"The AI-generated environments looked incredible. Concepts that would have cost $500K in CGI were done for a fraction."</p>
                     <p class="testimonial-author">James Park</p>
                     <p class="testimonial-role">Creative Director, Ad Agency</p>
-                    <div class="testimonial-rating">
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
                         <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                         <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                         <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                         <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                         <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                     </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <p class="testimonial-quote">"We localized our product videos into 12 languages with AI dubbing. The quality was indistinguishable from native speakers. Expanded to new markets in weeks instead of months."</p>
+                    <p class="testimonial-quote">"We localized our videos into 12 languages with AI dubbing. Quality was indistinguishable from native speakers."</p>
                     <p class="testimonial-author">Anna Weber</p>
-                    <p class="testimonial-role">VP International, E-Commerce Brand</p>
-                    <div class="testimonial-rating">
+                    <p class="testimonial-role">VP International, E-Commerce</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
                         <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                         <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                         <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                         <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                         <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                     </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <p class="testimonial-quote">"Finally, a production company that actually understands AI and when to use it. They didn't just throw AI at everything, they used it strategically where it made sense."</p>
+                    <p class="testimonial-quote">"Finally, a production company that understands AI. They use it strategically where it makes sense."</p>
                     <p class="testimonial-author">Derek Thompson</p>
                     <p class="testimonial-role">Head of Content, Media Company</p>
-                    <div class="testimonial-rating">
-                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ Section -->
+    <!-- FAQ -->
     <section class="faq-section">
         <div class="container">
-            <h2 class="section-title">AI Video Production FAQ</h2>
-            <p class="section-subtitle">Common questions about AI-powered video production.</p>
+            <div class="section-header">
+                <div class="section-label">FAQ</div>
+                <h2 class="section-title">AI Video Production Questions</h2>
+            </div>
 
             <div class="faq-list">
                 <div class="faq-item">
                     <button class="faq-question">
-                        Is AI-generated video really good enough for professional use?
+                        Is AI video really good enough for professional use?
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Yes, when used strategically and refined by professionals. AI video technology has advanced dramatically. We use AI for specific applications where it excels (backgrounds, effects, enhancement, localization) while keeping human talent for on-camera performance. All AI output is reviewed and refined by our team to meet broadcast standards.</p>
+                        <p>Yes, when used strategically and refined by professionals. We use AI where it excels (backgrounds, effects, enhancement, localization) while keeping human talent for on-camera performance. All output is reviewed to meet broadcast standards.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question">
-                        How much cheaper is AI video production?
+                        How much cheaper is AI production?
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>It depends on the project. AI doesn't make everything cheaper, but it can dramatically reduce costs for specific use cases: visual effects (often 80% savings), localization (90% savings), and content variants (can produce 10x more content for the same budget). We'll provide transparent estimates for both traditional and AI-enhanced approaches.</p>
+                        <p>It depends. AI can dramatically reduce costs for visual effects (80% savings), localization (90% savings), and content variants (10x more content for same budget). We provide transparent estimates for both approaches.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question">
-                        Will people be able to tell it's AI-generated?
+                        Will people tell it's AI-generated?
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Not if done right. Our team knows the limitations of AI tools and how to work around them. We don't use AI for applications where it looks artificial. All AI-generated elements are refined and integrated by professionals. The goal is seamless quality, not "AI for AI's sake."</p>
+                        <p>Not if done right. Our team knows the limitations and works around them. We don't use AI where it looks artificial. All elements are refined by professionals for seamless quality.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question">
-                        Do I own the rights to AI-generated content?
+                        Do I own the rights to AI content?
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Yes. We ensure all AI tools used provide commercial rights. We're transparent about which tools are used and maintain documentation. The legal landscape is evolving, and we stay current on best practices for commercial AI use.</p>
+                        <p>Yes. We ensure all tools provide commercial rights. We're transparent about which tools are used and maintain documentation for compliance.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question">
-                        Can you create AI-generated people or deepfakes?
+                        What if I want traditional production?
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>We don't create deepfakes or deceptive AI-generated people. For digital humans, we use ethical approaches with proper consent and disclosure. We can create synthetic presenters for specific use cases (like training videos) with full transparency about their AI nature.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        What if I just want traditional video production?
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>That's perfectly fine. AI is a tool in our toolkit, not a requirement. Many projects are best served by traditional production. We'll recommend the right approach based on your goals, timeline, and budget. Sometimes that's 100% traditional, sometimes it's AI-enhanced, sometimes it's a hybrid.</p>
+                        <p>That's fine. AI is a tool, not a requirement. We'll recommend the right approach based on your goals. Sometimes that's 100% traditional, sometimes AI-enhanced, sometimes hybrid.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Final CTA Section -->
-    <section class="final-cta">
+    <!-- CTA -->
+    <section class="cta-section">
         <div class="container">
-            <h2>Ready to Explore AI Video Production?</h2>
-            <p>Get a personalized consultation on how AI can transform your video content strategy.</p>
-
+            <h2>Ready to Explore AI Video?</h2>
+            <p>Get a personalized consultation on how AI can transform your video strategy.</p>
             <div class="cta-buttons">
-                <a href="#quote-form" class="btn btn-primary btn-large">Get AI Production Quote</a>
-                <a href="tel:+19177407612" class="btn btn-secondary btn-large">Call (917) 740-7612</a>
+                <a href="#form" class="btn btn-primary btn-lg">Get AI Production Quote</a>
+                <a href="tel:+19177407612" class="btn btn-secondary btn-lg">Call (917) 740-7612</a>
             </div>
         </div>
     </section>
@@ -851,30 +1458,28 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <div class="footer-logo">
-                        <span>GOLD LEADER</span>
-                    </div>
-                    <p>NYC's premier AI video production company. Combining cutting-edge AI technology with 20+ years of professional production expertise.</p>
+                    <a href="/" class="logo">Gold Leader</a>
+                    <p>NYC's premier AI video production company. Cutting-edge AI technology with 20+ years of production expertise.</p>
                 </div>
 
-                <div class="footer-column">
+                <div>
                     <h3 class="footer-title">AI Services</h3>
                     <ul class="footer-links">
-                        <li><a href="#ai-features">AI Commercial Production</a></li>
-                        <li><a href="#ai-features">AI Marketing Videos</a></li>
-                        <li><a href="#ai-features">AI Localization</a></li>
-                        <li><a href="#ai-features">AI Enhancement</a></li>
+                        <li><a href="#">AI Commercials</a></li>
+                        <li><a href="#">AI Marketing Videos</a></li>
+                        <li><a href="#">AI Localization</a></li>
                         <li><a href="video-production.html">Traditional Production</a></li>
                     </ul>
                 </div>
 
-                <div class="footer-column">
+                <div>
                     <h3 class="footer-title">Contact</h3>
-                    <div class="footer-contact">
-                        <p><strong>Phone:</strong> <a href="tel:+19177407612">(917) 740-7612</a></p>
-                        <p><strong>Email:</strong> <a href="mailto:hello@goldleader.ai">hello@goldleader.ai</a></p>
-                        <p><strong>Address:</strong> 253 West 28th Street, Chelsea, NYC</p>
-                    </div>
+                    <ul class="footer-links">
+                        <li><a href="tel:+19177407612">(917) 740-7612</a></li>
+                        <li><a href="mailto:hello@goldleader.ai">hello@goldleader.ai</a></li>
+                        <li>253 West 28th Street</li>
+                        <li>New York, NY 10001</li>
+                    </ul>
                 </div>
             </div>
 
@@ -884,138 +1489,70 @@
         </div>
     </footer>
 
-    <!-- Mobile Sticky CTA -->
-    <div class="mobile-sticky-cta">
+    <!-- Mobile CTA -->
+    <div class="mobile-cta">
         <a href="tel:+19177407612" class="btn btn-secondary">Call Now</a>
-        <a href="#quote-form" class="btn btn-primary">Get Quote</a>
+        <a href="#form" class="btn btn-primary">Get Quote</a>
     </div>
 
-    <!-- Form Validation & FAQ Script -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Form Validation
-            const form = document.getElementById('leadForm');
+        // Form validation
+        const form = document.getElementById('leadForm');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            let isValid = true;
+            const required = form.querySelectorAll('[required]');
 
-            form.addEventListener('submit', function(e) {
-                e.preventDefault();
+            required.forEach(field => {
+                const error = field.parentElement.querySelector('.error-message');
+                if (!field.value.trim()) {
+                    isValid = false;
+                    field.classList.add('error');
+                    if (error) {
+                        error.textContent = 'Required';
+                        error.classList.add('visible');
+                    }
+                } else {
+                    field.classList.remove('error');
+                    if (error) error.classList.remove('visible');
+                }
 
-                let isValid = true;
-                const requiredFields = form.querySelectorAll('[required]');
-
-                requiredFields.forEach(function(field) {
-                    const errorMessage = field.parentElement.querySelector('.error-message');
-
-                    if (!field.value.trim()) {
+                if (field.type === 'email' && field.value) {
+                    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(field.value)) {
                         isValid = false;
                         field.classList.add('error');
-                        if (errorMessage) {
-                            errorMessage.textContent = 'This field is required';
-                            errorMessage.classList.add('visible');
-                        }
-                    } else {
-                        field.classList.remove('error');
-                        if (errorMessage) {
-                            errorMessage.classList.remove('visible');
+                        if (error) {
+                            error.textContent = 'Invalid email';
+                            error.classList.add('visible');
                         }
                     }
-
-                    if (field.type === 'email' && field.value) {
-                        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                        if (!emailRegex.test(field.value)) {
-                            isValid = false;
-                            field.classList.add('error');
-                            if (errorMessage) {
-                                errorMessage.textContent = 'Please enter a valid email';
-                                errorMessage.classList.add('visible');
-                            }
-                        }
-                    }
-                });
-
-                if (isValid) {
-                    if (typeof gtag !== 'undefined') {
-                        gtag('event', 'form_submission', {
-                            'form_location': 'ai_video_production_lp'
-                        });
-                    }
-                    alert('Thank you! We will contact you within 24 hours to discuss your AI video project.');
-                    form.reset();
                 }
             });
 
-            // Real-time validation
-            form.querySelectorAll('input, select').forEach(function(field) {
-                field.addEventListener('blur', function() {
-                    const errorMessage = field.parentElement.querySelector('.error-message');
+            if (isValid) {
+                alert('Thank you! We\'ll contact you within 24 hours.');
+                form.reset();
+            }
+        });
 
-                    if (field.hasAttribute('required') && !field.value.trim()) {
-                        field.classList.add('error');
-                        if (errorMessage) {
-                            errorMessage.textContent = 'This field is required';
-                            errorMessage.classList.add('visible');
-                        }
-                    } else {
-                        field.classList.remove('error');
-                        if (errorMessage) {
-                            errorMessage.classList.remove('visible');
-                        }
-                    }
-                });
+        // FAQ accordion
+        document.querySelectorAll('.faq-question').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.parentElement;
+                const wasActive = item.classList.contains('active');
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+                if (!wasActive) item.classList.add('active');
             });
+        });
 
-            // FAQ Accordion
-            const faqItems = document.querySelectorAll('.faq-item');
-            faqItems.forEach(function(item) {
-                const question = item.querySelector('.faq-question');
-                question.addEventListener('click', function() {
-                    const wasActive = item.classList.contains('active');
-
-                    faqItems.forEach(function(otherItem) {
-                        otherItem.classList.remove('active');
-                    });
-
-                    if (!wasActive) {
-                        item.classList.add('active');
-                    }
-                });
-            });
-
-            // Smooth scroll for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
-            });
-
-            // Track phone clicks
-            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
-                link.addEventListener('click', function() {
-                    if (typeof gtag !== 'undefined') {
-                        gtag('event', 'phone_click', {
-                            'phone_number': '9177407612'
-                        });
-                    }
-                });
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', e => {
+                e.preventDefault();
+                const target = document.querySelector(a.getAttribute('href'));
+                if (target) target.scrollIntoView({ behavior: 'smooth' });
             });
         });
     </script>
-
-    <!-- Google Analytics placeholder -->
-    <!--
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'GA_MEASUREMENT_ID');
-    </script>
-    -->
 </body>
 </html>

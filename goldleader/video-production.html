@@ -6,229 +6,953 @@
     <title>Video Production for Business | Commercial & Brand Video Agency | Gold Leader</title>
     <meta name="description" content="NYC's premier video production company for business. Explainer videos, brand stories, social media content, TikTok ads, corporate training videos. Full-service production from concept to delivery.">
 
-    <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="styles.css">
-
-    <!-- Open Graph -->
     <meta property="og:title" content="Video Production for Business | Gold Leader">
-    <meta property="og:description" content="Full-service video production company. Explainer videos, brand stories, social media content, and corporate videos. NYC-based, serving clients worldwide.">
+    <meta property="og:description" content="Full-service video production company. Explainer videos, brand stories, social media content, and corporate videos.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://goldleader.ai/video-production">
 
-    <!-- Schema.org markup -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "VideoProductionCompany",
-      "name": "Gold Leader",
-      "description": "NYC's premier video production company for business. Full-service production from concept to delivery.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "253 West 28th Street",
-        "addressLocality": "New York",
-        "addressRegion": "NY",
-        "postalCode": "10001",
-        "addressCountry": "US"
-      },
-      "url": "https://goldleader.ai",
-      "telephone": "+19177407612",
-      "priceRange": "$$$",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "127"
-      },
-      "areaServed": ["New York", "United States", "Global"],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Video Production Services",
-        "itemListElement": [
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Commercial Video Production"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Explainer Videos"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Brand Story Videos"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Social Media Video Production"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Corporate Training Videos"}}
-        ]
-      }
-    }
-    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --color-primary: #00D9FF;
+            --color-primary-dark: #00B8D4;
+            --color-dark: #0A0A0B;
+            --color-dark-secondary: #131316;
+            --color-dark-tertiary: #1C1C21;
+            --color-text: #FFFFFF;
+            --color-text-secondary: #A1A1AA;
+            --color-text-muted: #71717A;
+            --color-border: #27272A;
+            --color-success: #10B981;
+            --font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --radius: 8px;
+            --radius-lg: 16px;
+            --transition: 200ms ease;
+        }
+
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-family);
+            background: var(--color-dark);
+            color: var(--color-text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .container-sm {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(10, 10, 11, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 72px;
+        }
+
+        .logo {
+            font-size: 1.125rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: var(--color-text);
+            text-decoration: none;
+        }
+
+        .header-cta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .header-phone {
+            color: var(--color-text-secondary);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            display: none;
+        }
+
+        @media (min-width: 640px) {
+            .header-phone {
+                display: block;
+            }
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            border-radius: var(--radius);
+            text-decoration: none;
+            transition: all var(--transition);
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--color-primary);
+            color: var(--color-dark);
+        }
+
+        .btn-primary:hover {
+            background: var(--color-primary-dark);
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--color-text);
+            border: 1px solid var(--color-border);
+        }
+
+        .btn-secondary:hover {
+            background: var(--color-dark-tertiary);
+            border-color: var(--color-text-muted);
+        }
+
+        .btn-lg {
+            padding: 14px 28px;
+            font-size: 1rem;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 160px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 800px;
+            height: 600px;
+            background: radial-gradient(ellipse at center, rgba(0, 217, 255, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: var(--color-dark-tertiary);
+            border: 1px solid var(--color-border);
+            border-radius: 100px;
+            font-size: 0.8125rem;
+            font-weight: 500;
+            color: var(--color-text-secondary);
+            margin-bottom: 24px;
+        }
+
+        .hero-badge-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--color-primary);
+            border-radius: 50%;
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-title span {
+            background: linear-gradient(135deg, var(--color-primary) 0%, #A78BFA 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--color-text-secondary);
+            max-width: 600px;
+            margin: 0 auto 40px;
+            line-height: 1.7;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            flex-wrap: wrap;
+            margin-bottom: 48px;
+        }
+
+        .hero-stat {
+            text-align: center;
+        }
+
+        .hero-stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--color-text);
+            letter-spacing: -0.02em;
+        }
+
+        .hero-stat-label {
+            font-size: 0.8125rem;
+            color: var(--color-text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .hero-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            opacity: 0.6;
+        }
+
+        .hero-logos img {
+            height: 24px;
+            width: auto;
+            filter: brightness(0) invert(1);
+        }
+
+        /* Form Section */
+        .form-section {
+            padding: 80px 0;
+            background: var(--color-dark-secondary);
+            border-top: 1px solid var(--color-border);
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .form-section-inner {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .form-header h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: -0.02em;
+        }
+
+        .form-header p {
+            color: var(--color-text-secondary);
+        }
+
+        .lead-form {
+            display: grid;
+            gap: 20px;
+        }
+
+        .form-row {
+            display: grid;
+            gap: 20px;
+        }
+
+        @media (min-width: 640px) {
+            .form-row {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: var(--color-text-secondary);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 16px;
+            background: var(--color-dark);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+            color: var(--color-text);
+            font-family: var(--font-family);
+            font-size: 1rem;
+            transition: border-color var(--transition);
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: var(--color-text-muted);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--color-primary);
+        }
+
+        .form-group select {
+            cursor: pointer;
+        }
+
+        .form-group input.error,
+        .form-group select.error {
+            border-color: #EF4444;
+        }
+
+        .error-message {
+            color: #EF4444;
+            font-size: 0.8125rem;
+            margin-top: 6px;
+            display: none;
+        }
+
+        .error-message.visible {
+            display: block;
+        }
+
+        .form-submit {
+            margin-top: 12px;
+        }
+
+        .form-submit .btn {
+            width: 100%;
+            padding: 16px;
+            font-size: 1rem;
+        }
+
+        .form-footer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 16px;
+            font-size: 0.8125rem;
+            color: var(--color-text-muted);
+        }
+
+        .form-footer svg {
+            width: 16px;
+            height: 16px;
+            color: var(--color-success);
+        }
+
+        /* Services Section */
+        .services-section {
+            padding: 100px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+
+        .section-label {
+            display: inline-block;
+            font-size: 0.8125rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 16px;
+        }
+
+        .section-title {
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
+        }
+
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: var(--color-text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            gap: 24px;
+        }
+
+        @media (min-width: 768px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .services-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .service-card {
+            padding: 32px;
+            background: var(--color-dark-secondary);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            transition: border-color var(--transition), transform var(--transition);
+        }
+
+        .service-card:hover {
+            border-color: var(--color-text-muted);
+            transform: translateY(-2px);
+        }
+
+        .service-icon {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--color-primary) 0%, #A78BFA 100%);
+            border-radius: var(--radius);
+            margin-bottom: 20px;
+        }
+
+        .service-icon svg {
+            width: 24px;
+            height: 24px;
+            color: var(--color-dark);
+        }
+
+        .service-card h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            letter-spacing: -0.01em;
+        }
+
+        .service-card p {
+            font-size: 0.9375rem;
+            color: var(--color-text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Process Section */
+        .process-section {
+            padding: 100px 0;
+            background: var(--color-dark-secondary);
+            border-top: 1px solid var(--color-border);
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .process-grid {
+            display: grid;
+            gap: 32px;
+        }
+
+        @media (min-width: 768px) {
+            .process-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 24px;
+            }
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+        }
+
+        .process-number {
+            width: 56px;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            background: var(--color-dark);
+            border: 2px solid var(--color-primary);
+            border-radius: 50%;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--color-primary);
+        }
+
+        .process-step h3 {
+            font-size: 1.0625rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .process-step p {
+            font-size: 0.875rem;
+            color: var(--color-text-secondary);
+        }
+
+        /* Benefits Section */
+        .benefits-section {
+            padding: 100px 0;
+        }
+
+        .benefits-grid {
+            display: grid;
+            gap: 48px;
+        }
+
+        @media (min-width: 768px) {
+            .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .benefits-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .benefit-item {
+            display: flex;
+            gap: 16px;
+        }
+
+        .benefit-icon {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--color-dark-tertiary);
+            border-radius: var(--radius);
+        }
+
+        .benefit-icon svg {
+            width: 20px;
+            height: 20px;
+            color: var(--color-primary);
+        }
+
+        .benefit-content h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .benefit-content p {
+            font-size: 0.875rem;
+            color: var(--color-text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Testimonials */
+        .testimonials-section {
+            padding: 100px 0;
+            background: var(--color-dark-secondary);
+            border-top: 1px solid var(--color-border);
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            gap: 24px;
+        }
+
+        @media (min-width: 768px) {
+            .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .testimonial-card {
+            padding: 32px;
+            background: var(--color-dark);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+        }
+
+        .testimonial-stars {
+            display: flex;
+            gap: 4px;
+            margin-bottom: 16px;
+        }
+
+        .testimonial-stars svg {
+            width: 18px;
+            height: 18px;
+            fill: #FBBF24;
+            color: #FBBF24;
+        }
+
+        .testimonial-quote {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--color-text-secondary);
+            margin-bottom: 20px;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            font-size: 0.9375rem;
+        }
+
+        .testimonial-role {
+            font-size: 0.8125rem;
+            color: var(--color-text-muted);
+        }
+
+        /* FAQ */
+        .faq-section {
+            padding: 100px 0;
+        }
+
+        .faq-list {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 24px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: transparent;
+            border: none;
+            font-family: var(--font-family);
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--color-text);
+            text-align: left;
+            cursor: pointer;
+            transition: color var(--transition);
+        }
+
+        .faq-question:hover {
+            color: var(--color-primary);
+        }
+
+        .faq-icon {
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: var(--color-text-muted);
+            transition: transform var(--transition);
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+        }
+
+        .faq-answer p {
+            padding-bottom: 24px;
+            color: var(--color-text-secondary);
+            line-height: 1.7;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 100px 0;
+            text-align: center;
+            background: linear-gradient(180deg, var(--color-dark-secondary) 0%, var(--color-dark) 100%);
+            border-top: 1px solid var(--color-border);
+        }
+
+        .cta-section h2 {
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            font-weight: 700;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+
+        .cta-section p {
+            font-size: 1.125rem;
+            color: var(--color-text-secondary);
+            margin-bottom: 32px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 64px 0 32px;
+            border-top: 1px solid var(--color-border);
+        }
+
+        .footer-grid {
+            display: grid;
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 2fr 1fr 1fr;
+            }
+        }
+
+        .footer-brand p {
+            color: var(--color-text-secondary);
+            font-size: 0.9375rem;
+            margin-top: 16px;
+            max-width: 300px;
+        }
+
+        .footer-title {
+            font-size: 0.8125rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--color-text-muted);
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: var(--color-text-secondary);
+            text-decoration: none;
+            font-size: 0.9375rem;
+            transition: color var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--color-text);
+        }
+
+        .footer-bottom {
+            padding-top: 32px;
+            border-top: 1px solid var(--color-border);
+            text-align: center;
+            color: var(--color-text-muted);
+            font-size: 0.875rem;
+        }
+
+        /* Mobile CTA */
+        .mobile-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 16px;
+            background: var(--color-dark);
+            border-top: 1px solid var(--color-border);
+            z-index: 90;
+            display: flex;
+            gap: 12px;
+        }
+
+        .mobile-cta .btn {
+            flex: 1;
+        }
+
+        @media (min-width: 768px) {
+            .mobile-cta {
+                display: none;
+            }
+        }
+
+        @media (max-width: 767px) {
+            body {
+                padding-bottom: 80px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Sticky Header -->
-    <header class="sticky-header">
-        <div class="container header-content">
-            <a href="/" class="logo">
-                <img src="../logos/goldleader-logo.svg" alt="Gold Leader" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                <span class="logo-text" style="display:none;">GOLD LEADER</span>
-            </a>
-            <div class="header-actions">
-                <a href="tel:+19177407612" class="phone-link">(917) 740-7612</a>
-                <a href="#quote-form" class="btn btn-primary btn-small">Get Quote</a>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="/" class="logo">Gold Leader</a>
+                <div class="header-cta">
+                    <a href="tel:+19177407612" class="header-phone">(917) 740-7612</a>
+                    <a href="#form" class="btn btn-primary">Get Quote</a>
+                </div>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section class="hero">
-        <div class="hero-background">
-            <div class="hero-overlay"></div>
-        </div>
-        <div class="container hero-container">
-            <div class="hero-content">
-                <span class="hero-badge">NYC Video Production Agency</span>
-                <h1 class="hero-title">Video Production That Drives Business Results</h1>
-                <p class="hero-subtitle">From explainer videos to social media content, we create videos that convert viewers into customers. Full-service production from concept to delivery.</p>
+        <div class="container">
+            <div class="hero-badge">
+                <span class="hero-badge-dot"></span>
+                NYC Video Production Agency
+            </div>
+            <h1 class="hero-title">Video Production That <span>Drives Results</span></h1>
+            <p class="hero-subtitle">From explainer videos to social media content, we create videos that convert viewers into customers. Full-service production from concept to delivery.</p>
 
-                <div class="hero-features">
-                    <div class="hero-feature">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
-                        <span>20+ Years Experience</span>
-                    </div>
-                    <div class="hero-feature">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
-                        <span>In-House Studios</span>
-                    </div>
-                    <div class="hero-feature">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
-                        <span>Full Post-Production</span>
-                    </div>
-                    <div class="hero-feature">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
-                        <span>Fortune 500 Clients</span>
-                    </div>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <div class="hero-stat-value">1000+</div>
+                    <div class="hero-stat-label">Videos Delivered</div>
                 </div>
-
-                <div class="trust-logos">
-                    <span class="trust-logos-label">Trusted by:</span>
-                    <img src="../logos/Nike.png" alt="Nike" class="trust-logo">
-                    <img src="../logos/HBO copy.png" alt="HBO" class="trust-logo">
-                    <img src="../logos/netflix-logo-white-png-900x244.png" alt="Netflix" class="trust-logo">
-                    <img src="../logos/food network.png" alt="Food Network" class="trust-logo">
+                <div class="hero-stat">
+                    <div class="hero-stat-value">20+</div>
+                    <div class="hero-stat-label">Years Experience</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-value">4.9</div>
+                    <div class="hero-stat-label">Client Rating</div>
                 </div>
             </div>
 
-            <!-- Lead Form -->
-            <div class="lead-form-card" id="quote-form">
-                <h3 class="form-title">Get Your Video Project Quote</h3>
-                <p class="form-subtitle">Same-day response guaranteed</p>
+            <div class="hero-logos">
+                <img src="../logos/Nike.png" alt="Nike">
+                <img src="../logos/HBO copy.png" alt="HBO">
+                <img src="../logos/netflix-logo-white-png-900x244.png" alt="Netflix">
+                <img src="../logos/food network.png" alt="Food Network">
+                <img src="../logos/Spotify_Logo_RGB_White.png" alt="Spotify">
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="form-section" id="form">
+        <div class="container">
+            <div class="form-section-inner">
+                <div class="form-header">
+                    <h2>Get Your Project Quote</h2>
+                    <p>Tell us about your video project and we'll respond within 24 hours.</p>
+                </div>
+
                 <form id="leadForm" class="lead-form" novalidate>
                     <div class="form-row">
                         <div class="form-group">
-                            <input type="text" id="firstName" name="firstName" placeholder="First Name*" required>
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" name="firstName" placeholder="John" required>
                             <span class="error-message"></span>
                         </div>
                         <div class="form-group">
-                            <input type="text" id="lastName" name="lastName" placeholder="Last Name*" required>
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" placeholder="Smith" required>
                             <span class="error-message"></span>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <input type="text" id="company" name="company" placeholder="Company Name">
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Work Email*" required>
-                        <span class="error-message"></span>
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" id="phone" name="phone" placeholder="Phone*" required>
-                        <span class="error-message"></span>
-                    </div>
-                    <div class="form-group">
-                        <select id="projectType" name="projectType" required>
-                            <option value="">Select Video Type*</option>
-                            <option value="explainer">Explainer Video</option>
-                            <option value="brand-story">Brand Story / Commercial</option>
-                            <option value="social-media">Social Media Content</option>
-                            <option value="product-demo">Product Demo Video</option>
-                            <option value="corporate-training">Corporate Training / E-Learning</option>
-                            <option value="video-ads">Video Ads (Paid Social)</option>
-                            <option value="internal-comms">Internal Communications</option>
-                            <option value="other">Other</option>
-                        </select>
-                        <span class="error-message"></span>
-                    </div>
-                    <div class="form-group">
-                        <select id="budget" name="budget">
-                            <option value="">Estimated Budget (Optional)</option>
-                            <option value="under-10k">Under $10,000</option>
-                            <option value="10k-25k">$10,000 - $25,000</option>
-                            <option value="25k-50k">$25,000 - $50,000</option>
-                            <option value="50k-100k">$50,000 - $100,000</option>
-                            <option value="100k-plus">$100,000+</option>
-                        </select>
-                    </div>
-                    <div class="form-cta-wrapper">
-                        <button type="submit" class="btn btn-primary btn-block">Get Free Quote</button>
-                        <div class="form-trust">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-                            </svg>
-                            <span>Your info is secure & never shared</span>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Work Email</label>
+                            <input type="email" id="email" name="email" placeholder="john@company.com" required>
+                            <span class="error-message"></span>
                         </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required>
+                            <span class="error-message"></span>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="projectType">Video Type</label>
+                            <select id="projectType" name="projectType" required>
+                                <option value="">Select video type...</option>
+                                <option value="explainer">Explainer Video</option>
+                                <option value="brand-story">Brand Story / Commercial</option>
+                                <option value="social-media">Social Media Content</option>
+                                <option value="product-demo">Product Demo</option>
+                                <option value="corporate-training">Corporate Training</option>
+                                <option value="video-ads">Video Ads</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <span class="error-message"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="budget">Budget Range</label>
+                            <select id="budget" name="budget">
+                                <option value="">Select budget...</option>
+                                <option value="under-10k">Under $10,000</option>
+                                <option value="10k-25k">$10,000 - $25,000</option>
+                                <option value="25k-50k">$25,000 - $50,000</option>
+                                <option value="50k-plus">$50,000+</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-submit">
+                        <button type="submit" class="btn btn-primary btn-lg">Get Free Quote</button>
+                    </div>
+                    <div class="form-footer">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                        <span>Your information is secure and never shared</span>
                     </div>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- Social Proof Bar -->
-    <section class="social-proof">
-        <div class="container">
-            <div class="social-proof-content">
-                <span class="social-proof-label">Trusted by Industry Leaders:</span>
-                <div class="logo-carousel">
-                    <img src="../logos/Nike.png" alt="Nike" class="logo-item">
-                    <img src="../logos/Universal.png" alt="Universal" class="logo-item">
-                    <img src="../logos/HBO copy.png" alt="HBO" class="logo-item">
-                    <img src="../logos/netflix-logo-white-png-900x244.png" alt="Netflix" class="logo-item">
-                    <img src="../logos/Dove.png" alt="Dove" class="logo-item">
-                    <img src="../logos/Dyson.png" alt="Dyson" class="logo-item">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="stats-section">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <span class="stat-value">1000+</span>
-                    <span class="stat-label">Videos Delivered</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-value">20+</span>
-                    <span class="stat-label">Years Experience</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-value">4.9</span>
-                    <span class="stat-label">Client Rating</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-value">100%</span>
-                    <span class="stat-label">In-House Team</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
+    <!-- Services -->
     <section class="services-section">
         <div class="container">
-            <h2 class="section-title">Video Production Services</h2>
-            <p class="section-subtitle">Full-service video production for every business need. From concept development to final delivery, we handle it all.</p>
+            <div class="section-header">
+                <div class="section-label">Services</div>
+                <h2 class="section-title">Full-Service Video Production</h2>
+                <p class="section-subtitle">From concept development to final delivery, we handle every aspect of your video project.</p>
+            </div>
 
             <div class="services-grid">
                 <div class="service-card">
@@ -239,7 +963,7 @@
                         </svg>
                     </div>
                     <h3>Explainer Videos</h3>
-                    <p>Transform complex ideas into engaging, easy-to-understand videos. Perfect for product launches, onboarding, and sales enablement.</p>
+                    <p>Transform complex ideas into engaging, easy-to-understand videos that drive conversions.</p>
                 </div>
 
                 <div class="service-card">
@@ -249,19 +973,19 @@
                         </svg>
                     </div>
                     <h3>Brand Story Videos</h3>
-                    <p>Authentic storytelling that connects with your audience emotionally. Build trust and loyalty through compelling brand narratives.</p>
+                    <p>Authentic storytelling that connects with your audience and builds lasting brand loyalty.</p>
                 </div>
 
                 <div class="service-card">
                     <div class="service-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <rect x="2" y="2" width="20" height="20" rx="5"/>
                             <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
                             <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
                         </svg>
                     </div>
                     <h3>Social Media Content</h3>
-                    <p>Scroll-stopping content for TikTok, Instagram Reels, YouTube Shorts, and LinkedIn. Optimized for each platform's algorithm.</p>
+                    <p>Scroll-stopping content for TikTok, Instagram Reels, YouTube Shorts, and LinkedIn.</p>
                 </div>
 
                 <div class="service-card">
@@ -270,8 +994,8 @@
                             <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
                         </svg>
                     </div>
-                    <h3>Product Demo Videos</h3>
-                    <p>Showcase your product's features and benefits in action. Drive conversions with professional demos that sell.</p>
+                    <h3>Product Demos</h3>
+                    <p>Showcase your product's features and benefits with professional demonstrations that sell.</p>
                 </div>
 
                 <div class="service-card">
@@ -284,7 +1008,7 @@
                         </svg>
                     </div>
                     <h3>Corporate Training</h3>
-                    <p>E-learning videos that engage employees and improve retention. From onboarding to compliance, we make training effective.</p>
+                    <p>E-learning videos that engage employees and improve retention rates.</p>
                 </div>
 
                 <div class="service-card">
@@ -294,99 +1018,68 @@
                         </svg>
                     </div>
                     <h3>Video Ads</h3>
-                    <p>High-converting video ads for paid social, YouTube, and connected TV. Creative that drives ROAS and scales your campaigns.</p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polygon points="23 7 16 12 23 17 23 7"/>
-                            <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
-                        </svg>
-                    </div>
-                    <h3>Commercial Production</h3>
-                    <p>Broadcast-quality commercials for TV, streaming, and digital. From 15-second spots to long-form branded content.</p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
-                        </svg>
-                    </div>
-                    <h3>Internal Communications</h3>
-                    <p>CEO messages, company updates, and culture videos that keep teams connected. Especially for hybrid and remote workforces.</p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z"/>
-                            <path d="M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
-                            <path d="M9.5 14c.83 0 1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5S8 21.33 8 20.5v-5c0-.83.67-1.5 1.5-1.5z"/>
-                            <path d="M3.5 14H5v1.5c0 .83-.67 1.5-1.5 1.5S2 16.33 2 15.5 2.67 14 3.5 14z"/>
-                            <path d="M14 14.5c0-.83.67-1.5 1.5-1.5h5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5h-5c-.83 0-1.5-.67-1.5-1.5z"/>
-                            <path d="M15.5 19H14v1.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z"/>
-                            <path d="M10 9.5C10 8.67 9.33 8 8.5 8h-5C2.67 8 2 8.67 2 9.5S2.67 11 3.5 11h5c.83 0 1.5-.67 1.5-1.5z"/>
-                            <path d="M8.5 5H10V3.5C10 2.67 9.33 2 8.5 2S7 2.67 7 3.5 7.67 5 8.5 5z"/>
-                        </svg>
-                    </div>
-                    <h3>Short-Form Content</h3>
-                    <p>TikTok, Reels, and Shorts that capture attention in the first second. Native content that feels organic, not advertorial.</p>
+                    <p>High-converting video ads for paid social, YouTube, and connected TV campaigns.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Process Section -->
+    <!-- Process -->
     <section class="process-section">
         <div class="container">
-            <h2 class="section-title">Our Production Process</h2>
-            <p class="section-subtitle">A proven workflow that delivers exceptional results, on time and on budget.</p>
+            <div class="section-header">
+                <div class="section-label">Process</div>
+                <h2 class="section-title">How We Work</h2>
+                <p class="section-subtitle">A proven workflow that delivers exceptional results, on time and on budget.</p>
+            </div>
 
             <div class="process-grid">
                 <div class="process-step">
                     <div class="process-number">1</div>
                     <h3>Discovery</h3>
-                    <p>We learn your goals, audience, and success metrics to craft the perfect strategy.</p>
+                    <p>We learn your goals, audience, and success metrics.</p>
                 </div>
                 <div class="process-step">
                     <div class="process-number">2</div>
                     <h3>Pre-Production</h3>
-                    <p>Script, storyboard, casting, and location scouting. Everything planned before cameras roll.</p>
+                    <p>Script, storyboard, casting, and planning.</p>
                 </div>
                 <div class="process-step">
                     <div class="process-number">3</div>
                     <h3>Production</h3>
-                    <p>Professional shoot in our studios or on location. In-house crew ensures quality control.</p>
+                    <p>Professional shoot in our studios or on location.</p>
                 </div>
                 <div class="process-step">
                     <div class="process-number">4</div>
-                    <h3>Post & Delivery</h3>
-                    <p>Editing, color, sound, and graphics. Delivered in all formats you need.</p>
+                    <h3>Delivery</h3>
+                    <p>Editing, color, sound, and final delivery.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Benefits Section -->
+    <!-- Benefits -->
     <section class="benefits-section">
         <div class="container">
-            <h2 class="section-title">Why Businesses Choose Gold Leader</h2>
-            <p class="section-subtitle">We're not just another video production company. We're your strategic partner in visual storytelling.</p>
+            <div class="section-header">
+                <div class="section-label">Why Gold Leader</div>
+                <h2 class="section-title">What Sets Us Apart</h2>
+            </div>
 
             <div class="benefits-grid">
-                <div class="benefit-card">
+                <div class="benefit-item">
                     <div class="benefit-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/>
+                            <path d="M3 21h18M5 21V7l7-4 7 4v14"/>
                         </svg>
                     </div>
-                    <h3>In-House Studios</h3>
-                    <p>4 purpose-built studios in Chelsea, NYC. White cyc, green screen, kitchen sets, and more. No rental fees or location hassles.</p>
+                    <div class="benefit-content">
+                        <h3>In-House Studios</h3>
+                        <p>4 purpose-built studios in Chelsea, NYC. No rental fees or location hassles.</p>
+                    </div>
                 </div>
 
-                <div class="benefit-card">
+                <div class="benefit-item">
                     <div class="benefit-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
@@ -395,23 +1088,40 @@
                             <path d="M16 3.13a4 4 0 010 7.75"/>
                         </svg>
                     </div>
-                    <h3>100% In-House Team</h3>
-                    <p>No freelancers. Our full-time crew knows your brand and delivers consistent quality across every project.</p>
+                    <div class="benefit-content">
+                        <h3>100% In-House Team</h3>
+                        <p>No freelancers. Our full-time crew delivers consistent quality.</p>
+                    </div>
                 </div>
 
-                <div class="benefit-card">
+                <div class="benefit-item">
                     <div class="benefit-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                            <rect x="2" y="3" width="20" height="14" rx="2"/>
                             <line x1="8" y1="21" x2="16" y2="21"/>
                             <line x1="12" y1="17" x2="12" y2="21"/>
                         </svg>
                     </div>
-                    <h3>Full Post-Production</h3>
-                    <p>Editing, color grading, motion graphics, and sound mixing under one roof. Faster turnarounds, better results.</p>
+                    <div class="benefit-content">
+                        <h3>Full Post-Production</h3>
+                        <p>Editing, color grading, motion graphics, and sound mixing under one roof.</p>
+                    </div>
                 </div>
 
-                <div class="benefit-card">
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                    </div>
+                    <div class="benefit-content">
+                        <h3>Proven Track Record</h3>
+                        <p>1000+ videos for Fortune 500 companies, startups, and agencies.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
                     <div class="benefit-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M12 2L2 7l10 5 10-5-10-5z"/>
@@ -419,102 +1129,99 @@
                             <path d="M2 12l10 5 10-5"/>
                         </svg>
                     </div>
-                    <h3>Platform Expertise</h3>
-                    <p>We know what works on TikTok vs. LinkedIn vs. YouTube. Content optimized for each platform's unique requirements.</p>
-                </div>
-
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
-                            <polyline points="22 4 12 14.01 9 11.01"/>
-                        </svg>
+                    <div class="benefit-content">
+                        <h3>Platform Expertise</h3>
+                        <p>Content optimized for each platform's unique requirements.</p>
                     </div>
-                    <h3>Proven Track Record</h3>
-                    <p>1000+ videos for Fortune 500 companies, startups, and agencies. 20+ years of award-winning work.</p>
                 </div>
 
-                <div class="benefit-card">
+                <div class="benefit-item">
                     <div class="benefit-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <circle cx="12" cy="12" r="10"/>
                             <polyline points="12 6 12 12 16 14"/>
                         </svg>
                     </div>
-                    <h3>Fast Turnaround</h3>
-                    <p>Streamlined workflows and dedicated resources mean faster delivery without sacrificing quality.</p>
+                    <div class="benefit-content">
+                        <h3>Fast Turnaround</h3>
+                        <p>Streamlined workflows mean faster delivery without sacrificing quality.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
+    <!-- Testimonials -->
     <section class="testimonials-section">
         <div class="container">
-            <h2 class="section-title">What Our Clients Say</h2>
-            <p class="section-subtitle">Don't just take our word for it. Here's what business leaders say about working with us.</p>
+            <div class="section-header">
+                <div class="section-label">Testimonials</div>
+                <h2 class="section-title">What Our Clients Say</h2>
+            </div>
 
-            <div class="testimonial-grid">
+            <div class="testimonials-grid">
                 <div class="testimonial-card">
-                    <p class="testimonial-quote">"Gold Leader transformed our product launch. The explainer video they created drove a 340% increase in demo requests. Their team understood exactly what we needed and delivered beyond expectations."</p>
+                    <div class="testimonial-stars">
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <p class="testimonial-quote">"Gold Leader transformed our product launch. The explainer video they created drove a 340% increase in demo requests."</p>
                     <p class="testimonial-author">Sarah Chen</p>
                     <p class="testimonial-role">VP Marketing, SaaS Company</p>
-                    <div class="testimonial-rating">
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
                         <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                         <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                         <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                         <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                         <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                     </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <p class="testimonial-quote">"We needed 50 product videos in 6 weeks. Most agencies said impossible. Gold Leader delivered 52, all on brand and on time. Their in-house team and studio made all the difference."</p>
+                    <p class="testimonial-quote">"We needed 50 product videos in 6 weeks. Most agencies said impossible. Gold Leader delivered 52, all on brand and on time."</p>
                     <p class="testimonial-author">Michael Torres</p>
-                    <p class="testimonial-role">Director of E-Commerce, Consumer Brand</p>
-                    <div class="testimonial-rating">
+                    <p class="testimonial-role">Director of E-Commerce</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
                         <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                         <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                         <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                         <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                         <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                     </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <p class="testimonial-quote">"The corporate training videos they produced reduced our onboarding time by 40%. Employees actually enjoy watching them. That's a first for compliance training."</p>
-                    <p class="testimonial-author">Jennifer Walsh</p>
-                    <p class="testimonial-role">Chief People Officer, Financial Services</p>
-                    <div class="testimonial-rating">
-                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <p class="testimonial-quote">"Our TikTok content went from 2K views to 2M views after partnering with Gold Leader. They understand what performs on social and how to make branded content feel native."</p>
+                    <p class="testimonial-quote">"Our TikTok content went from 2K views to 2M views after partnering with Gold Leader. They understand what performs."</p>
                     <p class="testimonial-author">David Kim</p>
                     <p class="testimonial-role">Head of Social, D2C Brand</p>
-                    <div class="testimonial-rating">
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
                         <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                         <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                         <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                         <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                         <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                     </div>
+                    <p class="testimonial-quote">"The training videos reduced our onboarding time by 40%. Employees actually enjoy watching them."</p>
+                    <p class="testimonial-author">Jennifer Walsh</p>
+                    <p class="testimonial-role">Chief People Officer</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ Section -->
+    <!-- FAQ -->
     <section class="faq-section">
         <div class="container">
-            <h2 class="section-title">Frequently Asked Questions</h2>
-            <p class="section-subtitle">Everything you need to know about working with Gold Leader.</p>
+            <div class="section-header">
+                <div class="section-label">FAQ</div>
+                <h2 class="section-title">Common Questions</h2>
+            </div>
 
             <div class="faq-list">
                 <div class="faq-item">
@@ -549,7 +1256,7 @@
 
                 <div class="faq-item">
                     <button class="faq-question">
-                        What's included in your video production packages?
+                        What's included in your packages?
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
@@ -559,17 +1266,7 @@
 
                 <div class="faq-item">
                     <button class="faq-question">
-                        Can you create content for multiple platforms from one shoot?
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Absolutely. We plan shoots with repurposing in mind. One production day can yield a hero video, 10+ social cuts, GIFs, and still images. We call it "content maximization" and it's a core part of our approach.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        Do you offer ongoing video production retainers?
+                        Do you offer ongoing retainers?
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
@@ -580,15 +1277,14 @@
         </div>
     </section>
 
-    <!-- Final CTA Section -->
-    <section class="final-cta">
+    <!-- CTA -->
+    <section class="cta-section">
         <div class="container">
-            <h2>Ready to Create Video That Drives Results?</h2>
+            <h2>Ready to Create Video That Converts?</h2>
             <p>Get a personalized quote for your video project. Same-day response guaranteed.</p>
-
             <div class="cta-buttons">
-                <a href="#quote-form" class="btn btn-primary btn-large">Get Free Quote</a>
-                <a href="tel:+19177407612" class="btn btn-secondary btn-large">Call (917) 740-7612</a>
+                <a href="#form" class="btn btn-primary btn-lg">Get Free Quote</a>
+                <a href="tel:+19177407612" class="btn btn-secondary btn-lg">Call (917) 740-7612</a>
             </div>
         </div>
     </section>
@@ -598,30 +1294,28 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <div class="footer-logo">
-                        <span>GOLD LEADER</span>
-                    </div>
-                    <p>NYC's premier video production company. Full-service production from concept to delivery. 20+ years of award-winning work for the world's biggest brands.</p>
+                    <a href="/" class="logo">Gold Leader</a>
+                    <p>NYC's premier video production company. Full-service production from concept to delivery.</p>
                 </div>
 
-                <div class="footer-column">
+                <div>
                     <h3 class="footer-title">Services</h3>
                     <ul class="footer-links">
-                        <li><a href="#services">Explainer Videos</a></li>
-                        <li><a href="#services">Brand Story Videos</a></li>
-                        <li><a href="#services">Social Media Content</a></li>
-                        <li><a href="#services">Corporate Training</a></li>
-                        <li><a href="#services">Video Ads</a></li>
+                        <li><a href="#">Explainer Videos</a></li>
+                        <li><a href="#">Brand Stories</a></li>
+                        <li><a href="#">Social Media</a></li>
+                        <li><a href="#">Corporate Training</a></li>
                     </ul>
                 </div>
 
-                <div class="footer-column">
+                <div>
                     <h3 class="footer-title">Contact</h3>
-                    <div class="footer-contact">
-                        <p><strong>Phone:</strong> <a href="tel:+19177407612">(917) 740-7612</a></p>
-                        <p><strong>Email:</strong> <a href="mailto:hello@goldleader.ai">hello@goldleader.ai</a></p>
-                        <p><strong>Address:</strong> 253 West 28th Street, Chelsea, NYC</p>
-                    </div>
+                    <ul class="footer-links">
+                        <li><a href="tel:+19177407612">(917) 740-7612</a></li>
+                        <li><a href="mailto:hello@goldleader.ai">hello@goldleader.ai</a></li>
+                        <li>253 West 28th Street</li>
+                        <li>New York, NY 10001</li>
+                    </ul>
                 </div>
             </div>
 
@@ -631,140 +1325,70 @@
         </div>
     </footer>
 
-    <!-- Mobile Sticky CTA -->
-    <div class="mobile-sticky-cta">
+    <!-- Mobile CTA -->
+    <div class="mobile-cta">
         <a href="tel:+19177407612" class="btn btn-secondary">Call Now</a>
-        <a href="#quote-form" class="btn btn-primary">Get Quote</a>
+        <a href="#form" class="btn btn-primary">Get Quote</a>
     </div>
 
-    <!-- Form Validation & FAQ Script -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Form Validation
-            const form = document.getElementById('leadForm');
+        // Form validation
+        const form = document.getElementById('leadForm');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            let isValid = true;
+            const required = form.querySelectorAll('[required]');
 
-            form.addEventListener('submit', function(e) {
-                e.preventDefault();
+            required.forEach(field => {
+                const error = field.parentElement.querySelector('.error-message');
+                if (!field.value.trim()) {
+                    isValid = false;
+                    field.classList.add('error');
+                    if (error) {
+                        error.textContent = 'Required';
+                        error.classList.add('visible');
+                    }
+                } else {
+                    field.classList.remove('error');
+                    if (error) error.classList.remove('visible');
+                }
 
-                let isValid = true;
-                const requiredFields = form.querySelectorAll('[required]');
-
-                requiredFields.forEach(function(field) {
-                    const errorMessage = field.parentElement.querySelector('.error-message');
-
-                    if (!field.value.trim()) {
+                if (field.type === 'email' && field.value) {
+                    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(field.value)) {
                         isValid = false;
                         field.classList.add('error');
-                        if (errorMessage) {
-                            errorMessage.textContent = 'This field is required';
-                            errorMessage.classList.add('visible');
-                        }
-                    } else {
-                        field.classList.remove('error');
-                        if (errorMessage) {
-                            errorMessage.classList.remove('visible');
+                        if (error) {
+                            error.textContent = 'Invalid email';
+                            error.classList.add('visible');
                         }
                     }
-
-                    if (field.type === 'email' && field.value) {
-                        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                        if (!emailRegex.test(field.value)) {
-                            isValid = false;
-                            field.classList.add('error');
-                            if (errorMessage) {
-                                errorMessage.textContent = 'Please enter a valid email';
-                                errorMessage.classList.add('visible');
-                            }
-                        }
-                    }
-                });
-
-                if (isValid) {
-                    if (typeof gtag !== 'undefined') {
-                        gtag('event', 'form_submission', {
-                            'form_location': 'video_production_lp'
-                        });
-                    }
-                    alert('Thank you! We will contact you within 24 hours with your quote.');
-                    form.reset();
                 }
             });
 
-            // Real-time validation
-            form.querySelectorAll('input, select').forEach(function(field) {
-                field.addEventListener('blur', function() {
-                    const errorMessage = field.parentElement.querySelector('.error-message');
+            if (isValid) {
+                alert('Thank you! We\'ll contact you within 24 hours.');
+                form.reset();
+            }
+        });
 
-                    if (field.hasAttribute('required') && !field.value.trim()) {
-                        field.classList.add('error');
-                        if (errorMessage) {
-                            errorMessage.textContent = 'This field is required';
-                            errorMessage.classList.add('visible');
-                        }
-                    } else {
-                        field.classList.remove('error');
-                        if (errorMessage) {
-                            errorMessage.classList.remove('visible');
-                        }
-                    }
-                });
+        // FAQ accordion
+        document.querySelectorAll('.faq-question').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.parentElement;
+                const wasActive = item.classList.contains('active');
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+                if (!wasActive) item.classList.add('active');
             });
+        });
 
-            // FAQ Accordion
-            const faqItems = document.querySelectorAll('.faq-item');
-            faqItems.forEach(function(item) {
-                const question = item.querySelector('.faq-question');
-                question.addEventListener('click', function() {
-                    const wasActive = item.classList.contains('active');
-
-                    // Close all other items
-                    faqItems.forEach(function(otherItem) {
-                        otherItem.classList.remove('active');
-                    });
-
-                    // Toggle current item
-                    if (!wasActive) {
-                        item.classList.add('active');
-                    }
-                });
-            });
-
-            // Smooth scroll for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
-            });
-
-            // Track phone clicks
-            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
-                link.addEventListener('click', function() {
-                    if (typeof gtag !== 'undefined') {
-                        gtag('event', 'phone_click', {
-                            'phone_number': '9177407612'
-                        });
-                    }
-                });
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', e => {
+                e.preventDefault();
+                const target = document.querySelector(a.getAttribute('href'));
+                if (target) target.scrollIntoView({ behavior: 'smooth' });
             });
         });
     </script>
-
-    <!-- Google Analytics placeholder -->
-    <!--
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'GA_MEASUREMENT_ID');
-    </script>
-    -->
 </body>
 </html>
