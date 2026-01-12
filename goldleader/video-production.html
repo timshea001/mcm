@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Production for Business | Commercial & Brand Video Agency | Gold Leader</title>
+    <meta name="description" content="NYC's premier video production company for business. Explainer videos, brand stories, social media content, TikTok ads, corporate training videos. Full-service production from concept to delivery.">
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Video Production for Business | Gold Leader">
+    <meta property="og:description" content="Full-service video production company. Explainer videos, brand stories, social media content, and corporate videos. NYC-based, serving clients worldwide.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://goldleader.ai/video-production">
+
+    <!-- Schema.org markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoProductionCompany",
+      "name": "Gold Leader",
+      "description": "NYC's premier video production company for business. Full-service production from concept to delivery.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "253 West 28th Street",
+        "addressLocality": "New York",
+        "addressRegion": "NY",
+        "postalCode": "10001",
+        "addressCountry": "US"
+      },
+      "url": "https://goldleader.ai",
+      "telephone": "+19177407612",
+      "priceRange": "$$$",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "127"
+      },
+      "areaServed": ["New York", "United States", "Global"],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Video Production Services",
+        "itemListElement": [
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Commercial Video Production"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Explainer Videos"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Brand Story Videos"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Social Media Video Production"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Corporate Training Videos"}}
+        ]
+      }
+    }
+    </script>
+</head>
+<body>
+    <!-- Sticky Header -->
+    <header class="sticky-header">
+        <div class="container header-content">
+            <a href="/" class="logo">
+                <img src="../logos/goldleader-logo.svg" alt="Gold Leader" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <span class="logo-text" style="display:none;">GOLD LEADER</span>
+            </a>
+            <div class="header-actions">
+                <a href="tel:+19177407612" class="phone-link">(917) 740-7612</a>
+                <a href="#quote-form" class="btn btn-primary btn-small">Get Quote</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="hero-badge">NYC Video Production Agency</span>
+                <h1 class="hero-title">Video Production That Drives Business Results</h1>
+                <p class="hero-subtitle">From explainer videos to social media content, we create videos that convert viewers into customers. Full-service production from concept to delivery.</p>
+
+                <div class="hero-features">
+                    <div class="hero-feature">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <span>20+ Years Experience</span>
+                    </div>
+                    <div class="hero-feature">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <span>In-House Studios</span>
+                    </div>
+                    <div class="hero-feature">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <span>Full Post-Production</span>
+                    </div>
+                    <div class="hero-feature">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <span>Fortune 500 Clients</span>
+                    </div>
+                </div>
+
+                <div class="trust-logos">
+                    <span class="trust-logos-label">Trusted by:</span>
+                    <img src="../logos/Nike.png" alt="Nike" class="trust-logo">
+                    <img src="../logos/HBO copy.png" alt="HBO" class="trust-logo">
+                    <img src="../logos/netflix-logo-white-png-900x244.png" alt="Netflix" class="trust-logo">
+                    <img src="../logos/food network.png" alt="Food Network" class="trust-logo">
+                </div>
+            </div>
+
+            <!-- Lead Form -->
+            <div class="lead-form-card" id="quote-form">
+                <h3 class="form-title">Get Your Video Project Quote</h3>
+                <p class="form-subtitle">Same-day response guaranteed</p>
+                <form id="leadForm" class="lead-form" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="firstName" name="firstName" placeholder="First Name*" required>
+                            <span class="error-message"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="lastName" name="lastName" placeholder="Last Name*" required>
+                            <span class="error-message"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="company" name="company" placeholder="Company Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Work Email*" required>
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" placeholder="Phone*" required>
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <select id="projectType" name="projectType" required>
+                            <option value="">Select Video Type*</option>
+                            <option value="explainer">Explainer Video</option>
+                            <option value="brand-story">Brand Story / Commercial</option>
+                            <option value="social-media">Social Media Content</option>
+                            <option value="product-demo">Product Demo Video</option>
+                            <option value="corporate-training">Corporate Training / E-Learning</option>
+                            <option value="video-ads">Video Ads (Paid Social)</option>
+                            <option value="internal-comms">Internal Communications</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <select id="budget" name="budget">
+                            <option value="">Estimated Budget (Optional)</option>
+                            <option value="under-10k">Under $10,000</option>
+                            <option value="10k-25k">$10,000 - $25,000</option>
+                            <option value="25k-50k">$25,000 - $50,000</option>
+                            <option value="50k-100k">$50,000 - $100,000</option>
+                            <option value="100k-plus">$100,000+</option>
+                        </select>
+                    </div>
+                    <div class="form-cta-wrapper">
+                        <button type="submit" class="btn btn-primary btn-block">Get Free Quote</button>
+                        <div class="form-trust">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                            </svg>
+                            <span>Your info is secure & never shared</span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Bar -->
+    <section class="social-proof">
+        <div class="container">
+            <div class="social-proof-content">
+                <span class="social-proof-label">Trusted by Industry Leaders:</span>
+                <div class="logo-carousel">
+                    <img src="../logos/Nike.png" alt="Nike" class="logo-item">
+                    <img src="../logos/Universal.png" alt="Universal" class="logo-item">
+                    <img src="../logos/HBO copy.png" alt="HBO" class="logo-item">
+                    <img src="../logos/netflix-logo-white-png-900x244.png" alt="Netflix" class="logo-item">
+                    <img src="../logos/Dove.png" alt="Dove" class="logo-item">
+                    <img src="../logos/Dyson.png" alt="Dyson" class="logo-item">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-value">1000+</span>
+                    <span class="stat-label">Videos Delivered</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">20+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">4.9</span>
+                    <span class="stat-label">Client Rating</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">100%</span>
+                    <span class="stat-label">In-House Team</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="container">
+            <h2 class="section-title">Video Production Services</h2>
+            <p class="section-subtitle">Full-service video production for every business need. From concept development to final delivery, we handle it all.</p>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polygon points="10 8 16 12 10 16 10 8"/>
+                        </svg>
+                    </div>
+                    <h3>Explainer Videos</h3>
+                    <p>Transform complex ideas into engaging, easy-to-understand videos. Perfect for product launches, onboarding, and sales enablement.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+                        </svg>
+                    </div>
+                    <h3>Brand Story Videos</h3>
+                    <p>Authentic storytelling that connects with your audience emotionally. Build trust and loyalty through compelling brand narratives.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                        </svg>
+                    </div>
+                    <h3>Social Media Content</h3>
+                    <p>Scroll-stopping content for TikTok, Instagram Reels, YouTube Shorts, and LinkedIn. Optimized for each platform's algorithm.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3>Product Demo Videos</h3>
+                    <p>Showcase your product's features and benefits in action. Drive conversions with professional demos that sell.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 010 7.75"/>
+                        </svg>
+                    </div>
+                    <h3>Corporate Training</h3>
+                    <p>E-learning videos that engage employees and improve retention. From onboarding to compliance, we make training effective.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+                        </svg>
+                    </div>
+                    <h3>Video Ads</h3>
+                    <p>High-converting video ads for paid social, YouTube, and connected TV. Creative that drives ROAS and scales your campaigns.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="23 7 16 12 23 17 23 7"/>
+                            <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+                        </svg>
+                    </div>
+                    <h3>Commercial Production</h3>
+                    <p>Broadcast-quality commercials for TV, streaming, and digital. From 15-second spots to long-form branded content.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+                        </svg>
+                    </div>
+                    <h3>Internal Communications</h3>
+                    <p>CEO messages, company updates, and culture videos that keep teams connected. Especially for hybrid and remote workforces.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z"/>
+                            <path d="M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+                            <path d="M9.5 14c.83 0 1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5S8 21.33 8 20.5v-5c0-.83.67-1.5 1.5-1.5z"/>
+                            <path d="M3.5 14H5v1.5c0 .83-.67 1.5-1.5 1.5S2 16.33 2 15.5 2.67 14 3.5 14z"/>
+                            <path d="M14 14.5c0-.83.67-1.5 1.5-1.5h5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5h-5c-.83 0-1.5-.67-1.5-1.5z"/>
+                            <path d="M15.5 19H14v1.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z"/>
+                            <path d="M10 9.5C10 8.67 9.33 8 8.5 8h-5C2.67 8 2 8.67 2 9.5S2.67 11 3.5 11h5c.83 0 1.5-.67 1.5-1.5z"/>
+                            <path d="M8.5 5H10V3.5C10 2.67 9.33 2 8.5 2S7 2.67 7 3.5 7.67 5 8.5 5z"/>
+                        </svg>
+                    </div>
+                    <h3>Short-Form Content</h3>
+                    <p>TikTok, Reels, and Shorts that capture attention in the first second. Native content that feels organic, not advertorial.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="container">
+            <h2 class="section-title">Our Production Process</h2>
+            <p class="section-subtitle">A proven workflow that delivers exceptional results, on time and on budget.</p>
+
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="process-number">1</div>
+                    <h3>Discovery</h3>
+                    <p>We learn your goals, audience, and success metrics to craft the perfect strategy.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">2</div>
+                    <h3>Pre-Production</h3>
+                    <p>Script, storyboard, casting, and location scouting. Everything planned before cameras roll.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">3</div>
+                    <h3>Production</h3>
+                    <p>Professional shoot in our studios or on location. In-house crew ensures quality control.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">4</div>
+                    <h3>Post & Delivery</h3>
+                    <p>Editing, color, sound, and graphics. Delivered in all formats you need.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <h2 class="section-title">Why Businesses Choose Gold Leader</h2>
+            <p class="section-subtitle">We're not just another video production company. We're your strategic partner in visual storytelling.</p>
+
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/>
+                        </svg>
+                    </div>
+                    <h3>In-House Studios</h3>
+                    <p>4 purpose-built studios in Chelsea, NYC. White cyc, green screen, kitchen sets, and more. No rental fees or location hassles.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 010 7.75"/>
+                        </svg>
+                    </div>
+                    <h3>100% In-House Team</h3>
+                    <p>No freelancers. Our full-time crew knows your brand and delivers consistent quality across every project.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                            <line x1="8" y1="21" x2="16" y2="21"/>
+                            <line x1="12" y1="17" x2="12" y2="21"/>
+                        </svg>
+                    </div>
+                    <h3>Full Post-Production</h3>
+                    <p>Editing, color grading, motion graphics, and sound mixing under one roof. Faster turnarounds, better results.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3>Platform Expertise</h3>
+                    <p>We know what works on TikTok vs. LinkedIn vs. YouTube. Content optimized for each platform's unique requirements.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                    </div>
+                    <h3>Proven Track Record</h3>
+                    <p>1000+ videos for Fortune 500 companies, startups, and agencies. 20+ years of award-winning work.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                    </div>
+                    <h3>Fast Turnaround</h3>
+                    <p>Streamlined workflows and dedicated resources mean faster delivery without sacrificing quality.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title">What Our Clients Say</h2>
+            <p class="section-subtitle">Don't just take our word for it. Here's what business leaders say about working with us.</p>
+
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"Gold Leader transformed our product launch. The explainer video they created drove a 340% increase in demo requests. Their team understood exactly what we needed and delivered beyond expectations."</p>
+                    <p class="testimonial-author">Sarah Chen</p>
+                    <p class="testimonial-role">VP Marketing, SaaS Company</p>
+                    <div class="testimonial-rating">
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"We needed 50 product videos in 6 weeks. Most agencies said impossible. Gold Leader delivered 52, all on brand and on time. Their in-house team and studio made all the difference."</p>
+                    <p class="testimonial-author">Michael Torres</p>
+                    <p class="testimonial-role">Director of E-Commerce, Consumer Brand</p>
+                    <div class="testimonial-rating">
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"The corporate training videos they produced reduced our onboarding time by 40%. Employees actually enjoy watching them. That's a first for compliance training."</p>
+                    <p class="testimonial-author">Jennifer Walsh</p>
+                    <p class="testimonial-role">Chief People Officer, Financial Services</p>
+                    <div class="testimonial-rating">
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"Our TikTok content went from 2K views to 2M views after partnering with Gold Leader. They understand what performs on social and how to make branded content feel native."</p>
+                    <p class="testimonial-author">David Kim</p>
+                    <p class="testimonial-role">Head of Social, D2C Brand</p>
+                    <div class="testimonial-rating">
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-subtitle">Everything you need to know about working with Gold Leader.</p>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How much does video production cost?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Video production costs vary based on complexity, length, and requirements. A simple explainer video might start around $10,000, while a full commercial campaign could range from $50,000-$150,000+. We provide detailed quotes after understanding your specific needs.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What's your typical turnaround time?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Most projects take 4-8 weeks from kickoff to delivery. Simple social content can be faster (2-3 weeks), while complex campaigns may take longer. We'll provide a detailed timeline during our initial consultation.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Do you work with clients outside NYC?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We work with clients worldwide. Many projects can be done remotely or in our NYC studios. For on-location shoots, our team travels anywhere you need us.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What's included in your video production packages?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Our packages typically include concept development, scriptwriting, storyboarding, production (crew, equipment, studio/location), and full post-production (editing, color grading, sound design, graphics). We also deliver in multiple formats optimized for each platform.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Can you create content for multiple platforms from one shoot?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely. We plan shoots with repurposing in mind. One production day can yield a hero video, 10+ social cuts, GIFs, and still images. We call it "content maximization" and it's a core part of our approach.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Do you offer ongoing video production retainers?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes. Many of our clients work with us on monthly or quarterly retainers for ongoing content needs. This provides priority scheduling, better rates, and a team that deeply understands your brand.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Ready to Create Video That Drives Results?</h2>
+            <p>Get a personalized quote for your video project. Same-day response guaranteed.</p>
+
+            <div class="cta-buttons">
+                <a href="#quote-form" class="btn btn-primary btn-large">Get Free Quote</a>
+                <a href="tel:+19177407612" class="btn btn-secondary btn-large">Call (917) 740-7612</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span>GOLD LEADER</span>
+                    </div>
+                    <p>NYC's premier video production company. Full-service production from concept to delivery. 20+ years of award-winning work for the world's biggest brands.</p>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#services">Explainer Videos</a></li>
+                        <li><a href="#services">Brand Story Videos</a></li>
+                        <li><a href="#services">Social Media Content</a></li>
+                        <li><a href="#services">Corporate Training</a></li>
+                        <li><a href="#services">Video Ads</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">Contact</h3>
+                    <div class="footer-contact">
+                        <p><strong>Phone:</strong> <a href="tel:+19177407612">(917) 740-7612</a></p>
+                        <p><strong>Email:</strong> <a href="mailto:hello@goldleader.ai">hello@goldleader.ai</a></p>
+                        <p><strong>Address:</strong> 253 West 28th Street, Chelsea, NYC</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Gold Leader. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Sticky CTA -->
+    <div class="mobile-sticky-cta">
+        <a href="tel:+19177407612" class="btn btn-secondary">Call Now</a>
+        <a href="#quote-form" class="btn btn-primary">Get Quote</a>
+    </div>
+
+    <!-- Form Validation & FAQ Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Form Validation
+            const form = document.getElementById('leadForm');
+
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                let isValid = true;
+                const requiredFields = form.querySelectorAll('[required]');
+
+                requiredFields.forEach(function(field) {
+                    const errorMessage = field.parentElement.querySelector('.error-message');
+
+                    if (!field.value.trim()) {
+                        isValid = false;
+                        field.classList.add('error');
+                        if (errorMessage) {
+                            errorMessage.textContent = 'This field is required';
+                            errorMessage.classList.add('visible');
+                        }
+                    } else {
+                        field.classList.remove('error');
+                        if (errorMessage) {
+                            errorMessage.classList.remove('visible');
+                        }
+                    }
+
+                    if (field.type === 'email' && field.value) {
+                        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                        if (!emailRegex.test(field.value)) {
+                            isValid = false;
+                            field.classList.add('error');
+                            if (errorMessage) {
+                                errorMessage.textContent = 'Please enter a valid email';
+                                errorMessage.classList.add('visible');
+                            }
+                        }
+                    }
+                });
+
+                if (isValid) {
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'form_submission', {
+                            'form_location': 'video_production_lp'
+                        });
+                    }
+                    alert('Thank you! We will contact you within 24 hours with your quote.');
+                    form.reset();
+                }
+            });
+
+            // Real-time validation
+            form.querySelectorAll('input, select').forEach(function(field) {
+                field.addEventListener('blur', function() {
+                    const errorMessage = field.parentElement.querySelector('.error-message');
+
+                    if (field.hasAttribute('required') && !field.value.trim()) {
+                        field.classList.add('error');
+                        if (errorMessage) {
+                            errorMessage.textContent = 'This field is required';
+                            errorMessage.classList.add('visible');
+                        }
+                    } else {
+                        field.classList.remove('error');
+                        if (errorMessage) {
+                            errorMessage.classList.remove('visible');
+                        }
+                    }
+                });
+            });
+
+            // FAQ Accordion
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(function(item) {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', function() {
+                    const wasActive = item.classList.contains('active');
+
+                    // Close all other items
+                    faqItems.forEach(function(otherItem) {
+                        otherItem.classList.remove('active');
+                    });
+
+                    // Toggle current item
+                    if (!wasActive) {
+                        item.classList.add('active');
+                    }
+                });
+            });
+
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Track phone clicks
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'phone_click', {
+                            'phone_number': '9177407612'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+
+    <!-- Google Analytics placeholder -->
+    <!--
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+    -->
+</body>
+</html>

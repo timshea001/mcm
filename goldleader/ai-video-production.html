@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Video Production Company | AI Commercial & Marketing Video Agency | Gold Leader</title>
+    <meta name="description" content="NYC's leading AI video production agency. Create stunning AI-powered commercials, marketing videos, and brand content. Combine cutting-edge AI with professional production expertise.">
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Page-specific styles for AI theme -->
+    <style>
+        .hero-background {
+            background: linear-gradient(135deg, #0a0a1a 0%, #1a0a2e 50%, #0a1a2a 100%);
+        }
+
+        .hero-badge {
+            background: rgba(138, 43, 226, 0.2);
+            border-color: #8B5CF6;
+            color: #A78BFA;
+        }
+
+        .ai-gradient-text {
+            background: linear-gradient(135deg, #00D9FF 0%, #8B5CF6 50%, #EC4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .ai-features-section {
+            padding: var(--spacing-3xl) 0;
+            background: linear-gradient(180deg, #0a0a1a 0%, #111827 100%);
+            color: var(--color-white);
+        }
+
+        .ai-features-section .section-title {
+            color: var(--color-white);
+        }
+
+        .ai-features-section .section-subtitle {
+            color: var(--color-grey-400);
+        }
+
+        .ai-feature-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .ai-feature-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .ai-feature-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .ai-feature-card {
+            padding: 2rem;
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(0, 217, 255, 0.05) 100%);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            border-radius: var(--radius-lg);
+            transition: transform var(--transition-base), border-color var(--transition-base);
+        }
+
+        .ai-feature-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(139, 92, 246, 0.6);
+        }
+
+        .ai-feature-card .feature-icon {
+            background: linear-gradient(135deg, #8B5CF6 0%, #00D9FF 100%);
+        }
+
+        .ai-feature-card h3 {
+            color: var(--color-white);
+            margin-bottom: 0.75rem;
+        }
+
+        .ai-feature-card p {
+            color: var(--color-grey-400);
+        }
+
+        .comparison-section {
+            padding: var(--spacing-3xl) 0;
+            background: var(--color-white);
+        }
+
+        .comparison-table-wrapper {
+            overflow-x: auto;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--color-white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .comparison-table thead {
+            background: var(--color-black);
+            color: var(--color-white);
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1rem 1.5rem;
+            text-align: left;
+        }
+
+        .comparison-table th {
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 0.875rem;
+        }
+
+        .comparison-table tbody tr {
+            border-bottom: 1px solid var(--color-grey-200);
+        }
+
+        .comparison-table tbody tr:last-child {
+            border-bottom: none;
+        }
+
+        .comparison-table tbody tr:hover {
+            background: var(--color-grey-50);
+        }
+
+        .comparison-table .check {
+            color: #10B981;
+            font-weight: 700;
+        }
+
+        .comparison-table .highlight-col {
+            background: rgba(0, 217, 255, 0.1);
+        }
+
+        .comparison-table thead .highlight-col {
+            background: var(--color-accent);
+            color: var(--color-black);
+        }
+
+        .use-cases-section {
+            padding: var(--spacing-3xl) 0;
+            background: var(--color-grey-50);
+        }
+
+        .use-case-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .use-case-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .use-case-card {
+            padding: 2rem;
+            background: var(--color-white);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--color-grey-200);
+            transition: transform var(--transition-base), box-shadow var(--transition-base);
+        }
+
+        .use-case-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .use-case-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .use-case-card h3 svg {
+            width: 24px;
+            height: 24px;
+            color: var(--color-accent);
+        }
+
+        .use-case-card p {
+            color: var(--color-grey-600);
+            margin-bottom: 1rem;
+        }
+
+        .use-case-card ul {
+            list-style: none;
+        }
+
+        .use-case-card ul li {
+            padding: 0.375rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--color-grey-700);
+            font-size: 0.9375rem;
+        }
+
+        .use-case-card ul li::before {
+            content: ">";
+            position: absolute;
+            left: 0;
+            color: var(--color-accent);
+            font-weight: 700;
+        }
+    </style>
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="AI Video Production Company | Gold Leader">
+    <meta property="og:description" content="NYC's leading AI video production agency. AI-powered commercials, marketing videos, and brand content with professional production quality.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://goldleader.ai/ai-video-production">
+
+    <!-- Schema.org markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoProductionCompany",
+      "name": "Gold Leader - AI Video Production",
+      "description": "NYC's leading AI video production agency combining cutting-edge AI technology with professional production expertise.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "253 West 28th Street",
+        "addressLocality": "New York",
+        "addressRegion": "NY",
+        "postalCode": "10001",
+        "addressCountry": "US"
+      },
+      "url": "https://goldleader.ai/ai-video-production",
+      "telephone": "+19177407612",
+      "priceRange": "$$$",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "89"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "AI Video Production Services",
+        "itemListElement": [
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "AI Commercial Production"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "AI Marketing Video Production"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "AI-Enhanced Post-Production"}}
+        ]
+      }
+    }
+    </script>
+</head>
+<body>
+    <!-- Sticky Header -->
+    <header class="sticky-header">
+        <div class="container header-content">
+            <a href="/" class="logo">
+                <img src="../logos/goldleader-logo.svg" alt="Gold Leader" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <span class="logo-text" style="display:none;">GOLD LEADER</span>
+            </a>
+            <div class="header-actions">
+                <a href="tel:+19177407612" class="phone-link">(917) 740-7612</a>
+                <a href="#quote-form" class="btn btn-primary btn-small">Get Quote</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="hero-badge">AI Video Production Agency</span>
+                <h1 class="hero-title"><span class="ai-gradient-text">AI-Powered</span> Video Production for the Modern Brand</h1>
+                <p class="hero-subtitle">Combine cutting-edge AI technology with 20+ years of professional production expertise. Create stunning commercials, marketing videos, and brand content faster and smarter.</p>
+
+                <div class="hero-features">
+                    <div class="hero-feature">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <span>AI + Human Creativity</span>
+                    </div>
+                    <div class="hero-feature">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <span>50% Faster Delivery</span>
+                    </div>
+                    <div class="hero-feature">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <span>Cost-Effective Scaling</span>
+                    </div>
+                    <div class="hero-feature">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <span>Enterprise Quality</span>
+                    </div>
+                </div>
+
+                <div class="trust-logos">
+                    <span class="trust-logos-label">Trusted by:</span>
+                    <img src="../logos/Nike.png" alt="Nike" class="trust-logo">
+                    <img src="../logos/HBO copy.png" alt="HBO" class="trust-logo">
+                    <img src="../logos/Universal.png" alt="Universal" class="trust-logo">
+                    <img src="../logos/Spotify_Logo_RGB_White.png" alt="Spotify" class="trust-logo">
+                </div>
+            </div>
+
+            <!-- Lead Form -->
+            <div class="lead-form-card" id="quote-form">
+                <h3 class="form-title">Get Your AI Video Quote</h3>
+                <p class="form-subtitle">Discover what's possible with AI production</p>
+                <form id="leadForm" class="lead-form" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="firstName" name="firstName" placeholder="First Name*" required>
+                            <span class="error-message"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="lastName" name="lastName" placeholder="Last Name*" required>
+                            <span class="error-message"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="company" name="company" placeholder="Company Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Work Email*" required>
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" placeholder="Phone*" required>
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <select id="projectType" name="projectType" required>
+                            <option value="">Select Project Type*</option>
+                            <option value="ai-commercial">AI Commercial Production</option>
+                            <option value="ai-marketing">AI Marketing Video</option>
+                            <option value="ai-social">AI Social Media Content</option>
+                            <option value="ai-product">AI Product Demo</option>
+                            <option value="ai-personalization">AI Video Personalization</option>
+                            <option value="ai-localization">AI Localization/Dubbing</option>
+                            <option value="ai-enhancement">AI Post-Production Enhancement</option>
+                            <option value="other">Other AI Video Project</option>
+                        </select>
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Tell us about your project (optional)" rows="3"></textarea>
+                    </div>
+                    <div class="form-cta-wrapper">
+                        <button type="submit" class="btn btn-primary btn-block">Get AI Production Quote</button>
+                        <div class="form-trust">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                            </svg>
+                            <span>Your info is secure & never shared</span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Bar -->
+    <section class="social-proof">
+        <div class="container">
+            <div class="social-proof-content">
+                <span class="social-proof-label">Trusted by Industry Leaders:</span>
+                <div class="logo-carousel">
+                    <img src="../logos/Nike.png" alt="Nike" class="logo-item">
+                    <img src="../logos/HBO copy.png" alt="HBO" class="logo-item">
+                    <img src="../logos/netflix-logo-white-png-900x244.png" alt="Netflix" class="logo-item">
+                    <img src="../logos/Spotify_Logo_RGB_White.png" alt="Spotify" class="logo-item">
+                    <img src="../logos/Ogilvy.png" alt="Ogilvy" class="logo-item">
+                    <img src="../logos/Dyson.png" alt="Dyson" class="logo-item">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Features Section -->
+    <section class="ai-features-section">
+        <div class="container">
+            <h2 class="section-title">AI-Powered Production Capabilities</h2>
+            <p class="section-subtitle">Leverage the latest AI technology while maintaining the quality and creativity that only humans can deliver.</p>
+
+            <div class="ai-feature-grid">
+                <div class="ai-feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3>AI-Generated Visuals</h3>
+                    <p>Create stunning backgrounds, environments, and visual effects using generative AI. Perfect for conceptual commercials and impossible-to-film scenarios.</p>
+                </div>
+
+                <div class="ai-feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 19l7-7 3 3-7 7-3-3z"/>
+                            <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
+                            <path d="M2 2l7.586 7.586"/>
+                            <circle cx="11" cy="11" r="2"/>
+                        </svg>
+                    </div>
+                    <h3>AI Video Enhancement</h3>
+                    <p>Upscale footage to 4K/8K, stabilize shaky video, and enhance colors automatically. Transform existing content into premium quality.</p>
+                </div>
+
+                <div class="ai-feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M2 12h20"/>
+                            <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+                        </svg>
+                    </div>
+                    <h3>AI Dubbing & Localization</h3>
+                    <p>Translate and dub your videos into 50+ languages with natural-sounding AI voices that preserve the original speaker's tone and emotion.</p>
+                </div>
+
+                <div class="ai-feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <circle cx="8.5" cy="8.5" r="1.5"/>
+                            <polyline points="21 15 16 10 5 21"/>
+                        </svg>
+                    </div>
+                    <h3>AI Background Removal</h3>
+                    <p>Instantly remove and replace backgrounds without green screens. Cut production costs and open creative possibilities.</p>
+                </div>
+
+                <div class="ai-feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 010 7.75"/>
+                        </svg>
+                    </div>
+                    <h3>AI Video Personalization</h3>
+                    <p>Create thousands of personalized video variants at scale. Perfect for account-based marketing and personalized customer communications.</p>
+                </div>
+
+                <div class="ai-feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+                            <path d="M19.07 4.93a10 10 0 010 14.14"/>
+                            <path d="M15.54 8.46a5 5 0 010 7.07"/>
+                        </svg>
+                    </div>
+                    <h3>AI Voice & Audio</h3>
+                    <p>Generate professional voiceovers, clone brand voices ethically, and enhance audio quality automatically. No recording studio needed.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="comparison-section">
+        <div class="container">
+            <h2 class="section-title">Traditional vs. AI-Powered Production</h2>
+            <p class="section-subtitle">See how AI enhances every aspect of video production while maintaining professional quality.</p>
+
+            <div class="comparison-table-wrapper">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Capability</th>
+                            <th>Traditional Production</th>
+                            <th class="highlight-col">Gold Leader AI Production</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Production Timeline</strong></td>
+                            <td>6-12 weeks typical</td>
+                            <td class="highlight-col"><span class="check">3-6 weeks</span> (50% faster)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Content Variants</strong></td>
+                            <td>Manual editing for each</td>
+                            <td class="highlight-col"><span class="check">Hundreds at scale</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Language Localization</strong></td>
+                            <td>Expensive voice talent per language</td>
+                            <td class="highlight-col"><span class="check">50+ languages instantly</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Visual Effects</strong></td>
+                            <td>Expensive CGI studios</td>
+                            <td class="highlight-col"><span class="check">AI-generated at fraction of cost</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Revisions</strong></td>
+                            <td>Each revision = more cost</td>
+                            <td class="highlight-col"><span class="check">Rapid iterations included</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Personalization</strong></td>
+                            <td>Not feasible at scale</td>
+                            <td class="highlight-col"><span class="check">1000s of personalized videos</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Legacy Content</strong></td>
+                            <td>Reshoot or accept quality</td>
+                            <td class="highlight-col"><span class="check">AI enhancement & upscaling</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Creative Direction</strong></td>
+                            <td>Human expertise</td>
+                            <td class="highlight-col"><span class="check">Human expertise + AI tools</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section class="use-cases-section">
+        <div class="container">
+            <h2 class="section-title">AI Video Production Use Cases</h2>
+            <p class="section-subtitle">Real applications where AI-powered production delivers exceptional results.</p>
+
+            <div class="use-case-grid">
+                <div class="use-case-card">
+                    <h3>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="23 7 16 12 23 17 23 7"/>
+                            <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+                        </svg>
+                        AI Commercial Production
+                    </h3>
+                    <p>Create high-impact commercials with AI-generated environments, characters, and effects that would be impossible or prohibitively expensive to film traditionally.</p>
+                    <ul>
+                        <li>Fantasy/impossible scenarios</li>
+                        <li>Product visualization</li>
+                        <li>Brand world-building</li>
+                        <li>Rapid A/B testing</li>
+                    </ul>
+                </div>
+
+                <div class="use-case-card">
+                    <h3>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+                        </svg>
+                        AI Marketing Videos
+                    </h3>
+                    <p>Scale your marketing content production with AI. Generate hundreds of variants for different audiences, platforms, and campaigns from a single shoot.</p>
+                    <ul>
+                        <li>Dynamic content at scale</li>
+                        <li>Personalized video campaigns</li>
+                        <li>Automated versioning</li>
+                        <li>Multi-platform optimization</li>
+                    </ul>
+                </div>
+
+                <div class="use-case-card">
+                    <h3>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M2 12h20"/>
+                            <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+                        </svg>
+                        Global Localization
+                    </h3>
+                    <p>Take your content global with AI dubbing that preserves the original speaker's voice, tone, and emotion across 50+ languages.</p>
+                    <ul>
+                        <li>Natural-sounding AI voices</li>
+                        <li>Lip-sync technology</li>
+                        <li>Cultural adaptation</li>
+                        <li>Rapid market expansion</li>
+                    </ul>
+                </div>
+
+                <div class="use-case-card">
+                    <h3>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                        </svg>
+                        AI Social Content
+                    </h3>
+                    <p>Create scroll-stopping social content at the speed of culture. AI helps you produce more content, test more ideas, and iterate faster.</p>
+                    <ul>
+                        <li>Rapid content creation</li>
+                        <li>Trend response content</li>
+                        <li>Automated reformatting</li>
+                        <li>Performance optimization</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <h2 class="section-title">Why Choose Gold Leader for AI Video</h2>
+            <p class="section-subtitle">We're not just an AI tool vendor. We're a full-service production company that strategically integrates AI.</p>
+
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3>AI + Human Expertise</h3>
+                    <p>Our team knows when AI enhances and when human creativity is essential. You get the best of both worlds, not just AI output.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                    </div>
+                    <h3>Quality Guaranteed</h3>
+                    <p>AI-generated content reviewed and refined by professionals. No uncanny valley, no obvious AI artifacts, no brand risk.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                            <line x1="12" y1="22.08" x2="12" y2="12"/>
+                        </svg>
+                    </div>
+                    <h3>Full Production Infrastructure</h3>
+                    <p>In-house studios, equipment, and post-production. AI augments our capabilities, it doesn't replace them.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
+                        </svg>
+                    </div>
+                    <h3>Cutting-Edge Tools</h3>
+                    <p>We invest in the latest AI tools and train constantly. Access to Runway, Pika, Midjourney, ElevenLabs, and more through one partner.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                            <path d="M7 11V7a5 5 0 0110 0v4"/>
+                        </svg>
+                    </div>
+                    <h3>Ethical AI Use</h3>
+                    <p>Transparent about AI use. Proper licensing. No deepfakes. We follow industry best practices and emerging regulations.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                    </div>
+                    <h3>Faster, Not Cheaper</h3>
+                    <p>We use AI to deliver better results faster, not to race to the bottom on price. Quality remains our north star.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title">What Our AI Production Clients Say</h2>
+            <p class="section-subtitle">Forward-thinking brands using AI video production to gain competitive advantage.</p>
+
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"Gold Leader helped us create 200 personalized videos for our ABM campaign in 3 weeks. Traditional production would have taken 6 months and 10x the budget. ROI was through the roof."</p>
+                    <p class="testimonial-author">Rachel Martinez</p>
+                    <p class="testimonial-role">CMO, B2B SaaS Platform</p>
+                    <div class="testimonial-rating">
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"The AI-generated environments in our commercial looked incredible. Concepts that would have cost $500K in CGI were done for a fraction. And you couldn't tell it was AI."</p>
+                    <p class="testimonial-author">James Park</p>
+                    <p class="testimonial-role">Creative Director, Ad Agency</p>
+                    <div class="testimonial-rating">
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"We localized our product videos into 12 languages with AI dubbing. The quality was indistinguishable from native speakers. Expanded to new markets in weeks instead of months."</p>
+                    <p class="testimonial-author">Anna Weber</p>
+                    <p class="testimonial-role">VP International, E-Commerce Brand</p>
+                    <div class="testimonial-rating">
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"Finally, a production company that actually understands AI and when to use it. They didn't just throw AI at everything, they used it strategically where it made sense."</p>
+                    <p class="testimonial-author">Derek Thompson</p>
+                    <p class="testimonial-role">Head of Content, Media Company</p>
+                    <div class="testimonial-rating">
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">AI Video Production FAQ</h2>
+            <p class="section-subtitle">Common questions about AI-powered video production.</p>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Is AI-generated video really good enough for professional use?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, when used strategically and refined by professionals. AI video technology has advanced dramatically. We use AI for specific applications where it excels (backgrounds, effects, enhancement, localization) while keeping human talent for on-camera performance. All AI output is reviewed and refined by our team to meet broadcast standards.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How much cheaper is AI video production?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>It depends on the project. AI doesn't make everything cheaper, but it can dramatically reduce costs for specific use cases: visual effects (often 80% savings), localization (90% savings), and content variants (can produce 10x more content for the same budget). We'll provide transparent estimates for both traditional and AI-enhanced approaches.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Will people be able to tell it's AI-generated?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Not if done right. Our team knows the limitations of AI tools and how to work around them. We don't use AI for applications where it looks artificial. All AI-generated elements are refined and integrated by professionals. The goal is seamless quality, not "AI for AI's sake."</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Do I own the rights to AI-generated content?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes. We ensure all AI tools used provide commercial rights. We're transparent about which tools are used and maintain documentation. The legal landscape is evolving, and we stay current on best practices for commercial AI use.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Can you create AI-generated people or deepfakes?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We don't create deepfakes or deceptive AI-generated people. For digital humans, we use ethical approaches with proper consent and disclosure. We can create synthetic presenters for specific use cases (like training videos) with full transparency about their AI nature.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What if I just want traditional video production?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>That's perfectly fine. AI is a tool in our toolkit, not a requirement. Many projects are best served by traditional production. We'll recommend the right approach based on your goals, timeline, and budget. Sometimes that's 100% traditional, sometimes it's AI-enhanced, sometimes it's a hybrid.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Ready to Explore AI Video Production?</h2>
+            <p>Get a personalized consultation on how AI can transform your video content strategy.</p>
+
+            <div class="cta-buttons">
+                <a href="#quote-form" class="btn btn-primary btn-large">Get AI Production Quote</a>
+                <a href="tel:+19177407612" class="btn btn-secondary btn-large">Call (917) 740-7612</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span>GOLD LEADER</span>
+                    </div>
+                    <p>NYC's premier AI video production company. Combining cutting-edge AI technology with 20+ years of professional production expertise.</p>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">AI Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#ai-features">AI Commercial Production</a></li>
+                        <li><a href="#ai-features">AI Marketing Videos</a></li>
+                        <li><a href="#ai-features">AI Localization</a></li>
+                        <li><a href="#ai-features">AI Enhancement</a></li>
+                        <li><a href="video-production.html">Traditional Production</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">Contact</h3>
+                    <div class="footer-contact">
+                        <p><strong>Phone:</strong> <a href="tel:+19177407612">(917) 740-7612</a></p>
+                        <p><strong>Email:</strong> <a href="mailto:hello@goldleader.ai">hello@goldleader.ai</a></p>
+                        <p><strong>Address:</strong> 253 West 28th Street, Chelsea, NYC</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Gold Leader. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Sticky CTA -->
+    <div class="mobile-sticky-cta">
+        <a href="tel:+19177407612" class="btn btn-secondary">Call Now</a>
+        <a href="#quote-form" class="btn btn-primary">Get Quote</a>
+    </div>
+
+    <!-- Form Validation & FAQ Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Form Validation
+            const form = document.getElementById('leadForm');
+
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                let isValid = true;
+                const requiredFields = form.querySelectorAll('[required]');
+
+                requiredFields.forEach(function(field) {
+                    const errorMessage = field.parentElement.querySelector('.error-message');
+
+                    if (!field.value.trim()) {
+                        isValid = false;
+                        field.classList.add('error');
+                        if (errorMessage) {
+                            errorMessage.textContent = 'This field is required';
+                            errorMessage.classList.add('visible');
+                        }
+                    } else {
+                        field.classList.remove('error');
+                        if (errorMessage) {
+                            errorMessage.classList.remove('visible');
+                        }
+                    }
+
+                    if (field.type === 'email' && field.value) {
+                        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                        if (!emailRegex.test(field.value)) {
+                            isValid = false;
+                            field.classList.add('error');
+                            if (errorMessage) {
+                                errorMessage.textContent = 'Please enter a valid email';
+                                errorMessage.classList.add('visible');
+                            }
+                        }
+                    }
+                });
+
+                if (isValid) {
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'form_submission', {
+                            'form_location': 'ai_video_production_lp'
+                        });
+                    }
+                    alert('Thank you! We will contact you within 24 hours to discuss your AI video project.');
+                    form.reset();
+                }
+            });
+
+            // Real-time validation
+            form.querySelectorAll('input, select').forEach(function(field) {
+                field.addEventListener('blur', function() {
+                    const errorMessage = field.parentElement.querySelector('.error-message');
+
+                    if (field.hasAttribute('required') && !field.value.trim()) {
+                        field.classList.add('error');
+                        if (errorMessage) {
+                            errorMessage.textContent = 'This field is required';
+                            errorMessage.classList.add('visible');
+                        }
+                    } else {
+                        field.classList.remove('error');
+                        if (errorMessage) {
+                            errorMessage.classList.remove('visible');
+                        }
+                    }
+                });
+            });
+
+            // FAQ Accordion
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(function(item) {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', function() {
+                    const wasActive = item.classList.contains('active');
+
+                    faqItems.forEach(function(otherItem) {
+                        otherItem.classList.remove('active');
+                    });
+
+                    if (!wasActive) {
+                        item.classList.add('active');
+                    }
+                });
+            });
+
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Track phone clicks
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'phone_click', {
+                            'phone_number': '9177407612'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+
+    <!-- Google Analytics placeholder -->
+    <!--
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+    -->
+</body>
+</html>
