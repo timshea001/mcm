@@ -189,6 +189,16 @@ footer .small{font-size:13px;color:#454545;margin-top:22px}
   .band p{margin-bottom:0}
 }
 </style>
+<!-- Google Ads (MCM account AW-592762693). Loaded only on the live lander host. -->
+<script>
+if (location.hostname === 'lp.mcmcreativestudios.com') {
+  var gt = document.createElement('script'); gt.async = true; gt.src = 'https://www.googletagmanager.com/gtag/js?id=AW-592762693';
+  document.head.appendChild(gt);
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function(){ dataLayer.push(arguments); };
+  gtag('js', new Date()); gtag('config', 'AW-592762693');
+}
+</script>
 </head>
 <body>
 
@@ -280,6 +290,7 @@ footer .small{font-size:13px;color:#454545;margin-top:22px}
           <input type="hidden" name="utm_campaign">
           <input type="hidden" name="utm_term">
           <input type="hidden" name="landing_page" value="stages-2026-10">
+          <div aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden"><label>Company site <input type="text" name="company_site" tabindex="-1" autocomplete="off"></label></div>
           <button class="btn btn-lime" type="submit" data-track="form-submit">Check availability</button>
           <div class="form-msg" id="form-msg" role="status" aria-live="polite"></div>
         </form>
@@ -484,16 +495,24 @@ footer .small{font-size:13px;color:#454545;margin-top:22px}
     });
   } catch (e) {}
 
-  // ================================================================
-  // SUBMIT HOOK: replace the body of this one function when the
-  // backend is chosen (Wix form endpoint, Formspree, Zapier, etc.).
-  // It receives a plain object of the form fields and must return a
-  // Promise. On success, fire the Google Ads conversion here too, e.g.
-  //   gtag('event', 'conversion', {send_to: 'AW-XXXXXXXXX/XXXXXXXX'});
-  // Preview build: no network call, resolves with preview:true.
-  // ================================================================
+  // Live host posts to the mcm-lead-form Vercel endpoint (Resend email to MCM) and fires the
+  // "Submit lead form" Google Ads conversion. Any other host (hub preview, localhost) stays preview-only.
+  var LIVE = location.hostname === 'lp.mcmcreativestudios.com';
+  var ENDPOINT = 'https://mcm-lead-form.vercel.app/api/inquiry';
+  var submitting = false;
   function submitInquiry(data) {
-    return Promise.resolve({ preview: true, data: data });
+    if (!LIVE) return Promise.resolve({ preview: true, data: data });
+    if (submitting) return Promise.resolve({ busy: true });
+    submitting = true;
+    var btn = form.querySelector('[type=submit]'); btn.disabled = true;
+    return fetch(ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) })
+      .then(function(r){ return r.json().then(function(j){ if (!r.ok || !j.ok) throw new Error(j.error || r.status); return j; }); })
+      .then(function(j){
+        if (window.gtag) gtag('event', 'conversion', { send_to: 'AW-592762693/21BbCO2Jz6cDEMWu05oC', transaction_id: j.id || '' });
+        form.reset();
+        return j;
+      })
+      .finally(function(){ submitting = false; btn.disabled = false; });
   }
 
   function validEmail(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v); }
@@ -525,6 +544,7 @@ footer .small{font-size:13px;color:#454545;margin-top:22px}
     var data = {};
     new FormData(form).forEach(function(v,k){ data[k] = v; });
     submitInquiry(data).then(function(res){
+      if (res && res.busy) return;
       msg.textContent = res && res.preview
         ? "Preview only: this form isn't connected yet. Your details were not sent. To book now, call (917) 740-7612 or email mcmstages@gmail.com."
         : "Thanks, we got it. We'll be in touch about availability.";
